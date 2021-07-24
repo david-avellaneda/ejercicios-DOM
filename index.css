@@ -1,0 +1,109 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+html{
+     font-size:62.5% /* 1rem = 10px */
+}
+header{
+    position:absolute;
+    background-color:#f7df1e;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+header .header-iconMenu {
+    width:7rem;
+    background-color:#f7df1e;
+    border-radius:100%;
+    padding:1.3rem;
+    position:fixed;
+    right:3%;
+    bottom:6%;
+    z-index:100;
+}
+header nav .menu{
+    height:100vh;
+    width:100%;
+    position:absolute;
+    background-color:#000000c5;
+    left:0;
+    z-index:1;
+    margin-inline-start:-100%;
+    padding-block-start:12rem;
+    transition:all 1.5s;
+    position:fixed;
+}
+header nav .menu .menu-item{
+    list-style:none;
+    width:100%;
+    color:#000;
+}
+header nav .menu .menu-item:hover{
+    background-color:#f7df1e;
+    transition: all .5s ease;
+}
+header nav .menu .menu-item .menu-link{
+    text-decoration:none;
+    color:#f7df1e;
+    width:inherit;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:10vh;
+    font-size:2.5rem;
+}
+header nav .menu .menu-item:hover .menu-link{
+    color:#000;
+}
+header nav .mostrar {
+	margin-inline-start:0;
+	width:100%;
+	height:100vh;
+	transition:all 1s;
+	overflow:auto;
+}
+main .main-title{
+    width:100%;
+    height:7rem;
+    background-color:#f7df1e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.3rem;
+    text-align:center;
+}
+main .main-section{
+    width:100%;
+    height:100vh;
+    padding-block-start:2rem;
+    font-size:1.5rem;
+}
+main .main-section .section-title{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+main .main-section .section1-buttons{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-block-start:2rem;
+}
+main .main-section .section1-buttons .clockButton{
+    background-color:#ff0000;
+    margin-inline:1rem;
+    padding:.7rem;
+    border:solid 2px #000;
+    border-radius:2rem;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:pointer;
+}
+main .main-section .section1-buttons .clockButton:hover{
+    background-color:#f7df1e;
+    color:#000;
+}
