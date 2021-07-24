@@ -87,13 +87,13 @@ main .main-section .section-title{
     display:flex;
     justify-content:center;
 }
-main .main-section .section1-buttons{
+main .main-section .section1-clock-buttons, main .main-section .section1-music-buttons{
     width:100%;
     display:flex;
     justify-content:center;
     margin-block-start:2rem;
 }
-main .main-section .section1-buttons .clockButton{
+main .main-section .section1-clock-buttons .clockButton{
     background-color:#ff0000;
     margin-inline:1rem;
     padding:.7rem;
@@ -103,7 +103,16 @@ main .main-section .section1-buttons .clockButton{
     font-weight:bold;
     cursor:pointer;
 }
-main .main-section .section1-buttons .clockButton:hover{
-    background-color:#f7df1e;
-    color:#000;
+main .main-section .section1-clock-buttons .clockButton:hover, main .main-section .section1-music-buttons .musicButton:hover{
+    background-color:#2172eb;
+}
+main .main-section .section1-music-buttons .musicButton{
+    background-color:#3cb42c;
+    margin-inline:1rem;
+    padding:.7rem;
+    border:solid 2px #000;
+    border-radius:2rem;
+    color:#ffffff;
+    font-weight:bold;
+    cursor:pointer;
 }
