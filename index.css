@@ -95,6 +95,7 @@ main .main-section .section1-clock-buttons, main .main-section .section1-music-b
 }
 main .main-section .section1-clock-buttons .clockButton{
     background-color:#ff0000;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Para quitarle ese borde azul al darle click */
     outline:none;
     margin-inline:1rem;
     padding:.7rem;
@@ -110,6 +111,7 @@ main .main-section .section1-clock-buttons .clockButton:hover, main .main-sectio
 main .main-section .section1-music-buttons .musicButton{
     background-color:#3cb42c;
     outline:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     margin-inline:1rem;
     padding:.7rem;
     border:solid 2px #000;
