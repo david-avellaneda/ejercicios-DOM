@@ -120,3 +120,19 @@ main .main-section .section1-music-buttons .musicButton{
     font-weight:bold;
     cursor:pointer;
 }
+main .main-section .section2-stage{
+    width:90%;
+    height:60vh;
+    margin:0 auto;
+    margin-block-start:2rem;
+    background-color:rgb(24, 21, 21);
+    display:flex;
+}
+main .main-section .section2-stage .section2-ball {
+    margin: auto;
+    width:4rem;
+    height:4rem;
+    background-color:#ff0000;
+    border-radius:100%;
+    transition:all .1s ease;
+}
