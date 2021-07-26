@@ -87,13 +87,13 @@ main .main-section .section-title{
     display:flex;
     justify-content:center;
 }
-main .main-section .section1-clock-buttons, main .main-section .section1-music-buttons{
+main .main-section1 .section1-clock-buttons, main .main-section1 .section1-music-buttons{
     width:100%;
     display:flex;
     justify-content:center;
     margin-block-start:2rem;
 }
-main .main-section .section1-clock-buttons .clockButton{
+main .main-section1 .section1-clock-buttons .clockButton{
     background-color:#ff0000;
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Para quitarle ese borde azul al darle click */
     outline:none;
@@ -105,10 +105,10 @@ main .main-section .section1-clock-buttons .clockButton{
     font-weight:bold;
     cursor:pointer;
 }
-main .main-section .section1-clock-buttons .clockButton:hover, main .main-section .section1-music-buttons .musicButton:hover{
+main .main-section1 .section1-clock-buttons .clockButton:hover, main .main-section1 .section1-music-buttons .musicButton:hover{
     background-color:#2172eb;
 }
-main .main-section .section1-music-buttons .musicButton{
+main .main-section1 .section1-music-buttons .musicButton{
     background-color:#3cb42c;
     outline:none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -120,7 +120,7 @@ main .main-section .section1-music-buttons .musicButton{
     font-weight:bold;
     cursor:pointer;
 }
-main .main-section .section2-stage{
+main .main-section2 .section2-stage{
     width:90%;
     height:60vh;
     margin:0 auto;
@@ -128,7 +128,7 @@ main .main-section .section2-stage{
     background-color:rgb(24, 21, 21);
     display:flex;
 }
-main .main-section .section2-stage .section2-ball {
+main .main-section2 .section2-stage .section2-ball {
     margin: auto;
     width:4rem;
     height:4rem;
@@ -136,3 +136,25 @@ main .main-section .section2-stage .section2-ball {
     border-radius:100%;
     transition:all .1s ease;
 }
+main .main-section3 .countDown{
+    display:flex;
+    justify-content: center;
+    margin-block-start: 2rem;
+}
+main .main-section3 .countDown .time-element{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: .5rem;
+    color: #ff0000;
+    height: 8rem;
+    width:6rem;
+    background-color:#000;
+    border-radius: .8rem;
+    text-align: center;
+    font-size: 3.5rem;
+    overflow: hidden;
+}
+main .main-section3 .countDown h3{
+    text-align: center;
+} 

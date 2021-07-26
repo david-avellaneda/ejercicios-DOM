@@ -4,8 +4,8 @@ export default function moveBall (e, stage, ball) {
         $ball = document.querySelector(ball),
         ballLimit = $ball.getBoundingClientRect(),
         stageLimit = $stage.getBoundingClientRect();
-        console.log(e.keyCode);
-        console.log(ballLimit, stageLimit);
+        // console.log(e.keyCode);
+        // console.log(ballLimit, stageLimit);
     switch (e.keyCode) {
         case 37: // Left
             if(ballLimit.left > stageLimit.left) {
