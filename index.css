@@ -21,9 +21,10 @@ header .header-iconMenu {
     border-radius:100%;
     padding:1.3rem;
     position:fixed;
-    right:3%;
-    bottom:6%;
+    right:5vh;
+    bottom:6vh;
     z-index:100;
+    background-repeat: no-repeat;
 }
 header nav .menu{
     height:100vh;
@@ -75,6 +76,32 @@ main .main-title{
     align-items:center;
     font-size:1.3rem;
     text-align:center;
+}
+main .scrollTop{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    width: 7rem;
+    right: 5vh;
+    bottom: 18vh;
+    background:#f7df1e;
+    padding: 1.3rem;
+    border-radius:100%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+    bottom:80rem;
+}
+main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clas .active*/ 
+    visibility: visible;
+    opacity: 1;
+    bottom:18vh;
+}
+main .scrollTop img{
+    width:100%;
+    background-repeat: no-repeat;
 }
 main .main-section{
     width:100%;

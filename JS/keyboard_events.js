@@ -2,7 +2,7 @@ let x = 0, y = 0;
 export default function moveBall (e, stage, ball) {
     const $stage = document.querySelector(stage),
         $ball = document.querySelector(ball),
-        ballLimit = $ball.getBoundingClientRect(),
+        ballLimit = $ball.getBoundingClientRect(), // getBoundingClientRect() devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (viewport).
         stageLimit = $stage.getBoundingClientRect();
         // console.log(e.keyCode);
         // console.log(ballLimit, stageLimit);
