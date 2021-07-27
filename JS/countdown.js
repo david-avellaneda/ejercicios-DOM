@@ -31,13 +31,7 @@ export default function countdown(dateLimit) {
         // console.log(countdownDate, now, timeLimit); // limitTime es la diferencia de tiempo, como la distancia en milisegundos entre fechas
         if(timeLimit < 0){
             clearInterval(countdownCounter);
-            $countdown.innerHTML = `<p class="textContent">Hola mi vida hermosa, esto es para ti, lo hice con mucho amor y mucha motivación, por eso no te hablé ayer ni hoy porque estuve haciendo esto.
-            <br>
-            Quería decirte que no te pongas brava conmigo, son peleas que ño se deben dar tan fuertes, shi? Hace rato no peleamos:(, quieres hacer las pases o ño?
-            Te amo mucho,  no existe nada tan bonito como recibir un mensaje tuyo, sea la hora que sea, esté donde esté, sin importar lo que esté haciendo, siempre me alegra saber que me piensas 💖.
-            Esto es un pequeño detalle para ti, no es mucho pero bueño:(
-            <br>
-            11:11 ✌💖 TE AMO MI VIDA</p>`
+            $countdown.innerHTML = `<p class="textContent">Feliz navidad 🥳🥳🥳</p>`
             const $textContent = document.querySelector(".textContent");
             $textContent.style.setProperty("text-align", "center");
             $textContent.style.setProperty("line-height", "2.8rem");
