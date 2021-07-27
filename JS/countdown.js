@@ -28,10 +28,19 @@ export default function countdown(dateLimit) {
             $seconds.innerHTML = `<h3>${seconds}</h3>`;
             if(seconds == 1) $timeInSeconds.innerHTML = `<h3>Segundo</h3>`;
             if(seconds > 1 || seconds == 0) $timeInSeconds.innerHTML = `<h3>Segundos</h3>`;
-        console.log(countdownDate, now, timeLimit); // limitTime es la diferencia de tiempo, como la distancia en milisegundos entre fechas
+        // console.log(countdownDate, now, timeLimit); // limitTime es la diferencia de tiempo, como la distancia en milisegundos entre fechas
         if(timeLimit < 0){
             clearInterval(countdownCounter);
-            $countdown.innerHTML = `<h3>Son las 10:15 pm 😎</h3>`
+            $countdown.innerHTML = `<p class="textContent">Hola mi vida hermosa, esto es para ti, lo hice con mucho amor y mucha motivación, por eso no te hablé ayer ni hoy porque estuve haciendo esto.
+            <br>
+            Quería decirte que no te pongas brava porque conmigo, son peleas tontas, shi? Hace rato no peleamos:(, quieres hacer las pases o ño?
+            Te amo mucho,  no existe nada tan bonito como recibir un mensaje tuyo, sea la hora que sea, esté donde esté, sin importar lo que esté haciendo, siempre me alegra saber que me piensas 💖.
+            Esto es un pequeño detalle para ti, no es mucho pero bueño:(
+            <br>
+            11:11 ✌💖 TE AMO MI VIDA</p>`
+            const $textContent = document.querySelector(".textContent");
+            $textContent.style.setProperty("text-align", "center");
+            $textContent.style.setProperty("line-height", "2.8rem");
         };
     }, 1000);
 };

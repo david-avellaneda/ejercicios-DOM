@@ -137,10 +137,14 @@ main .main-section2 .section2-stage .section2-ball {
     transition:all .1s ease;
 }
 main .main-section3 .countdown{
+    width: 70%;
+    margin: auto;
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-block-start: 2rem;
+    margin-block-start: 3rem;
+    font-family: 'Baloo Chettan 2', cursive;
+    transition: all 2s ease;
 }
 main .main-section3 .countdown span{
     margin-block-end: 3rem;
@@ -150,11 +154,11 @@ main .main-section3 .countdown .time-element{
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-inline: 2rem;
+    margin-inline: 1.5rem;
     margin-block-end: 1rem;
     color: #ff0000;
-    height: 12rem;
-    width:12rem;
+    height: 11rem;
+    width:11rem;
     background-color:#000;
     border-radius: .8rem;
     text-align: center;

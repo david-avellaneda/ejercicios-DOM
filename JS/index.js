@@ -8,7 +8,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     menuHamburguesa();
     digitalClock("#realTimeClock", "#activateWatch", "#deactivateWatch");
     musicBotton("#activateMusic", "#deactivateMusic");
-    countdown("Jul 26 2021 22:15:00");
+    countdown("Jul 27 2021 11:11:00");
 });
 d.addEventListener("keydown", (e) => {
     moveBall(e, ".section2-stage", ".section2-ball");
