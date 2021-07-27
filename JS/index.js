@@ -11,6 +11,10 @@ d.addEventListener("DOMContentLoaded", () => {
     musicBotton("#activateMusic", "#deactivateMusic");
     countdown("Dec 24 2021 24:00:00");
 });
-d.addEventListener("keydown", (e) => moveBall(e, ".section2-stage", ".section2-ball"));
+const $section2_stage = document.getElementById("section2-stage");
+$section2_stage.addEventListener("click", () => {
+    d.addEventListener("keydown", (e) => moveBall(e, ".section2-stage", ".section2-ball"));
+});
 d.addEventListener("scroll", () => scrollTop());
-d.addEventListener("click", () => goToStart("scrollToTop"));
+const $scrollToTop = document.getElementById("scrollToTop")
+$scrollToTop.addEventListener("click", () => goToStart("scrollToTop"));
