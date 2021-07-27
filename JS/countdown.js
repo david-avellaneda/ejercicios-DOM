@@ -31,7 +31,7 @@ export default function countdown(dateLimit) {
         console.log(countdownDate, now, timeLimit); // limitTime es la diferencia de tiempo, como la distancia en milisegundos entre fechas
         if(timeLimit < 0){
             clearInterval(countdownCounter);
-            $countdown.innerHTML = `<h3>Son las 10:05 pm 😎</h3>`
+            $countdown.innerHTML = `<h3>Son las 10:25 pm 😎</h3>`
         };
     });
 };
