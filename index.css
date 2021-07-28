@@ -69,13 +69,14 @@ header nav .mostrar {
 	overflow:auto;
 }
 main .main-title{
+    position: fixed;
     width:100%;
-    height:7rem;
+    height:6rem;
     background-color:#f7df1e;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:1.3rem;
+    font-size:1.2rem;
     text-align:center;
 }
 main .scrollTop{
@@ -114,7 +115,7 @@ main .scrollTop:hover svg{
 main .main-section{
     width:100%;
     height:100vh;
-    padding-block-start:2rem;
+    padding-block-start:9rem;
     font-size:1.5rem;
 }
 main .main-section .section-title{
