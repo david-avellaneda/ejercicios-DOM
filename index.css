@@ -97,7 +97,7 @@ main .scrollTop{
 }
 main .scrollTop:hover{
     background-color:rgb(26, 24, 24);
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .active en el html*/ 
     visibility: visible;
@@ -109,7 +109,7 @@ main .scrollTop svg{
 }
 main .scrollTop:hover svg{
     fill:#f7df1e;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 main .main-section{
     width:100%;
