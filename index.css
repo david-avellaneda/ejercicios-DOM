@@ -94,14 +94,21 @@ main .scrollTop{
     transition: all 1s ease;
     bottom:80rem;
 }
-main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clas .active*/ 
+main .scrollTop:hover{
+    background-color:rgb(26, 24, 24);
+    transition: all .5s ease-in-out;
+}
+main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .active en el html*/ 
     visibility: visible;
     opacity: 1;
     bottom:18vh;
 }
-main .scrollTop img{
+main .scrollTop svg{
     width:100%;
-    background-repeat: no-repeat;
+}
+main .scrollTop:hover svg{
+    fill:#f7df1e;
+    transition: all .4s ease-in-out;
 }
 main .main-section{
     width:100%;
