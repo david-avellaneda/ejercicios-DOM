@@ -200,7 +200,7 @@ main .main-section1 .section1-clock-buttons .clockButton{
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
-    transition: all .4s ease;
+    transition: all .5s ease;
 }
 body.dark main .main-section1 .section1-clock-buttons .clockButton{
     background-color:#bb00ff;
@@ -215,13 +215,14 @@ main .main-section1 .section1-music-buttons .musicButton{
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
-    transition: all .4s ease;
+    transition: all .5s ease;
 }
 body.dark main .main-section1 .section1-music-buttons .musicButton{
     background-color: #ff7100;
 }
 main .main-section1 .section1-clock-buttons .clockButton:hover, main .main-section1 .section1-music-buttons .musicButton:hover{
     background-color:#2172eb;
+    transition: all .2s ease;
 }
 body.dark main .main-section1 .section1-clock-buttons .clockButton:hover, body.dark main .main-section1 .section1-music-buttons .musicButton:hover{
     background-color: #ffff;
