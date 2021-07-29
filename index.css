@@ -8,6 +8,13 @@
 html{
      font-size:62.5% /* 1rem = 10px */
 }
+body{
+    background:#ffff;
+    transition: all 2s ease;
+}
+body.dark{ /* Cuando el body tenga una clase llamada dark */
+    background: #000;
+}
 header{
     position:absolute;
     background-color:#f7df1e;
@@ -68,16 +75,60 @@ header nav .mostrar {
 	transition:all 1s;
 	overflow:auto;
 }
-main .main-title{
+main .main-header{
     position: fixed;
     width:100%;
     height:6rem;
     background-color:#f7df1e;
     display:flex;
-    justify-content:center;
+    justify-content: space-around;
     align-items:center;
-    font-size:1.2rem;
+    font-size:1.3rem;
     text-align:center;
+}
+main .main-header .changeBackground{
+    width: 8rem;
+    height: 3rem;
+    background: #000;
+    border-radius: 100rem;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    outline: none;
+}
+main .main-header .changeBackground .changeBackground-btn{ /* En CSS, ::after crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad content.Es en linea (inline) de forma predeterminada. AFTER ES COMO UN DIV, LA DIFERENCIA ES QUE NO SE ESCRIBE EL EL HTML SINO ACÁ */
+    /* content: ""; esto es obligatorio SI SE PONE ::after*/
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    background-color:#F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset; /* Para que cuando se le dé click lo ponga al la derecha por eso aún no se declara la posición, cuando se le de click left para a unset y right a 0 */
+    border-radius: 10rem;
+    transition: all 1s ease;
+    transform: translateX(0px);
+    box-shadow: 0 0 .4rem .4rem rgba(0,0,0, .3);
+}
+main .main-header .changeBackground.active{ /* Cuando se le agregue la clase active cambié de fondo nuestro botón */
+    background-color: #000;
+}
+main .main-header .changeBackground.active .changeBackground-btn{
+    /* right: 0; LO QUITO YA QUE VOY A REALIZAR UNA ANIMACIÓN QUE VAYA DE LEFT 0 A 40PX HACIA LA DERECHA*/ 
+    left: 0;
+    transform: translateX(50px)
+}
+main .main-header .changeBackground span{
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    line-height: 3rem;
+    display: block;
+    background: none;
+    fill: #ffff;
 }
 main .scrollTop{
     display:flex;
@@ -97,7 +148,7 @@ main .scrollTop{
     bottom:80rem;
 }
 main .scrollTop:hover{
-    background-color:rgb(26, 24, 24);
+    background-color:rgb(43, 39, 39);
     transition: all .4s ease-in-out;
 }
 main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .active en el html*/ 
@@ -107,11 +158,14 @@ main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .acti
 }
 main .scrollTop svg{
     width:100%;
+    transition: all .3s ease-in-out;
 }
 main .scrollTop:hover svg{
     fill:#f7df1e;
-    transition: all .3s ease-in-out;
 }
+/* body.dark main .scrollTop:hover svg{
+    
+} */
 main .main-section{
     width:100%;
     height:100vh;
@@ -122,6 +176,13 @@ main .main-section .section-title{
     width:100%;
     display:flex;
     justify-content:center;
+    transition: all 2s ease;
+}
+body.dark .main-section .section-title{
+    color:#f7df1e;
+}
+body.dark main .main-section1 #realTimeClock .realTimeClock-title{
+    color:#ffff;
 }
 main .main-section1 .section1-clock-buttons, main .main-section1 .section1-music-buttons{
     width:100%;
@@ -139,9 +200,10 @@ main .main-section1 .section1-clock-buttons .clockButton{
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
+    transition: all .4s ease;
 }
-main .main-section1 .section1-clock-buttons .clockButton:hover, main .main-section1 .section1-music-buttons .musicButton:hover{
-    background-color:#2172eb;
+body.dark main .main-section1 .section1-clock-buttons .clockButton{
+    background-color:#bb00ff;
 }
 main .main-section1 .section1-music-buttons .musicButton{
     background-color:#3cb42c;
@@ -153,6 +215,17 @@ main .main-section1 .section1-music-buttons .musicButton{
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
+    transition: all .4s ease;
+}
+body.dark main .main-section1 .section1-music-buttons .musicButton{
+    background-color: #ff7100;
+}
+main .main-section1 .section1-clock-buttons .clockButton:hover, main .main-section1 .section1-music-buttons .musicButton:hover{
+    background-color:#2172eb;
+}
+body.dark main .main-section1 .section1-clock-buttons .clockButton:hover, body.dark main .main-section1 .section1-music-buttons .musicButton:hover{
+    background-color: #ffff;
+    color: #000;
 }
 main .main-section2 .section2-stage{
     width:90%;
@@ -169,6 +242,15 @@ main .main-section2 .section2-stage .section2-ball {
     background-color:#ff0000;
     border-radius:100%;
     transition:all .1s ease;
+}
+main .main-section3 .section3-content{
+    text-align: center;
+    font-size: 1.7rem;
+    margin-block-start: 2rem;
+    transition: all 2s ease;
+}
+body.dark main .main-section3 .section3-content{
+    color: #ffff;
 }
 main .main-section3 .countdown{
     width: 70%;
@@ -198,4 +280,15 @@ main .main-section3 .countdown .time-element{
     text-align: center;
     font-size: 3.5rem;
     overflow: hidden;
+    transition: all 2s ease;
+}
+body.dark main .main-section3 .countdown .time-element{
+    background-color: #ff0000;
+    color: #000;
+}
+main .main-section3 .countdown .timeMeasurements{
+    transition: all 2s ease;
+}
+body.dark main .main-section3 .countdown .timeMeasurements{
+    color: #ffff;
 }
