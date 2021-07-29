@@ -43,8 +43,15 @@ header nav .menu{
     z-index:1;
     margin-inline-start:-100%;
     padding-block-start:12rem;
-    transition:all 1.5s;
+    transition:all 1.4s;
     position:fixed;
+}
+header nav .mostrar {
+	margin-inline-start:0;
+	width:100%;
+	height:100vh;
+	transition:all 1.4s;
+	overflow:auto;
 }
 header nav .menu .menu-item{
     list-style:none;
@@ -67,13 +74,6 @@ header nav .menu .menu-item .menu-link{
 }
 header nav .menu .menu-item:hover .menu-link{
     color:#000;
-}
-header nav .mostrar {
-	margin-inline-start:0;
-	width:100%;
-	height:100vh;
-	transition:all 1s;
-	overflow:auto;
 }
 main .main-header{
     position: fixed;
