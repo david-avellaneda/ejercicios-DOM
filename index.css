@@ -253,7 +253,7 @@ body.dark main .main-section3 .section3-content{
     color: #ffff;
 }
 main .main-section3 .countdown{
-    width: 70%;
+    width: 90%;
     margin: auto;
     display:flex;
     flex-flow: row wrap;
@@ -270,7 +270,7 @@ main .main-section3 .countdown .time-element{
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-inline: 1.5rem;
+    margin-inline: 1.6rem;
     margin-block-end: 1rem;
     color: #ff0000;
     height: 11rem;
