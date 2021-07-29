@@ -144,8 +144,8 @@ main .scrollTop{
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-    transition: all 1s ease;
-    bottom:80rem;
+    transition: all 2s ease;
+    bottom:90vh;
 }
 main .scrollTop:hover{
     background-color:rgb(43, 39, 39);
