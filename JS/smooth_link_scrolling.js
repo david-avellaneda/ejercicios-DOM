@@ -1,4 +1,4 @@
-// window.onload = () => {
+// window.onload = () => { // En este caso onload significa que el evento se activará únicamente cuando la ventana del navegador haya cargado (o leído) todas las líneas del documento .
 //     const links = document.querySelectorAll(".menu-link");
 //     const firstLink = links[0];
 //     firstLink.addEventListener("click", () => {
