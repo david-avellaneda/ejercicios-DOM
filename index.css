@@ -9,7 +9,7 @@ html{
 }
 body{
     background:#ffff;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark{ /* Cuando el body tenga una clase llamada dark */
     background: #000;
@@ -176,7 +176,7 @@ main .main-section .section-title{
     width:100%;
     display:flex;
     justify-content:center;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section .section-title{
     color:#f7df1e;
@@ -247,7 +247,7 @@ main .main-section3 .section3-content{
     text-align: center;
     font-size: 1.7rem;
     margin-block-start: 2rem;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark main .main-section3 .section3-content{
     color: #ffff;
@@ -260,7 +260,7 @@ main .main-section3 .countdown{
     justify-content: center;
     margin-block-start: 3rem;
     font-family: 'Baloo Chettan 2', cursive;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 main .main-section3 .countdown span{
     margin-block-end: 3rem;
@@ -280,14 +280,14 @@ main .main-section3 .countdown .time-element{
     text-align: center;
     font-size: 3.5rem;
     overflow: hidden;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark main .main-section3 .countdown .time-element{
     background-color: #ff0000;
     color: #000;
 }
 main .main-section3 .countdown .timeMeasurements{
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark main .main-section3 .countdown .timeMeasurements{
     color: #ffff;
