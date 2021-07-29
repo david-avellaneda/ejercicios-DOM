@@ -9,7 +9,7 @@ html{
 }
 body{
     background:#ffff;
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 body.dark{ /* Cuando el body tenga una clase llamada dark */
     background: #000;
@@ -108,7 +108,7 @@ main .main-header .changeBackground .changeBackground-btn{ /* En CSS, ::after cr
     left: 0;
     right: unset; /* Para que cuando se le dé click lo ponga al la derecha por eso aún no se declara la posición, cuando se le de click left para a unset y right a 0 */
     border-radius: 10rem;
-    transition: all 1s ease;
+    transition: all 2s ease;
     transform: translateX(0px);
     box-shadow: 0 0 .4rem .4rem rgba(0,0,0, .3);
 }
@@ -176,7 +176,7 @@ main .main-section .section-title{
     width:100%;
     display:flex;
     justify-content:center;
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 body.dark .main-section .section-title{
     color:#f7df1e;
@@ -247,7 +247,7 @@ main .main-section3 .section3-content{
     text-align: center;
     font-size: 1.7rem;
     margin-block-start: 2rem;
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 body.dark main .main-section3 .section3-content{
     color: #ffff;
@@ -260,7 +260,7 @@ main .main-section3 .countdown{
     justify-content: center;
     margin-block-start: 3rem;
     font-family: 'Baloo Chettan 2', cursive;
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 main .main-section3 .countdown span{
     margin-block-end: 3rem;
@@ -280,14 +280,14 @@ main .main-section3 .countdown .time-element{
     text-align: center;
     font-size: 3.5rem;
     overflow: hidden;
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 body.dark main .main-section3 .countdown .time-element{
     background-color: #ff0000;
     color: #000;
 }
 main .main-section3 .countdown .timeMeasurements{
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 body.dark main .main-section3 .countdown .timeMeasurements{
     color: #ffff;
