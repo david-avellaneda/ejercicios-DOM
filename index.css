@@ -2,7 +2,6 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
-    scroll-behavior:smooth;
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Para quitarle ese borde azul al darle click */
 }
 html{
@@ -155,6 +154,7 @@ main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .acti
     visibility: visible;
     opacity: 1;
     bottom:18vh;
+    scroll-behavior: smooth;
 }
 main .scrollTop svg{
     width:100%;
