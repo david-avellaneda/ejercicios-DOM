@@ -13,7 +13,6 @@ d.addEventListener("DOMContentLoaded", () => {
     musicBotton("#activateMusic", "#deactivateMusic");
     countdown("Dec 24 2021 24:00:00");
     scrollTop(".scrollTop");
-    darkMode("changeBackground");
 
     const links = document.querySelectorAll(".menu-link");
     const firstLink = links[0];
@@ -37,6 +36,7 @@ d.addEventListener("DOMContentLoaded", () => {
         smoothScroll("#section5", "3000");
     });
 });
+darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
     d.addEventListener("keydown", (e) => moveBall(e, ".section2-stage", ".section2-ball"));
