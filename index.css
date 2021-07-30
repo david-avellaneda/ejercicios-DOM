@@ -293,3 +293,42 @@ main .main-section3 .countdown .timeMeasurements{
 body.dark main .main-section3 .countdown .timeMeasurements{
     color: #ffff;
 }
+main .main-section4 .section4-content{
+    width:90%;
+    height: auto;
+    margin: 0 auto;
+    margin-block-start: 2rem;
+}
+main .main-section4 .section4-content .content-youtube, main .main-section4 .section4-content .content-maps{
+    width:100%;
+    height: auto;
+    margin-block-end: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+main .main-section4 .section4-content .content-youtube .youtube-title-mobile, main .main-section4 .section4-content .content-maps .maps-title-mobile {
+    text-align:center; 
+    margin-block:2rem 1rem; 
+    grid-column:1/3; 
+    grid-row:1;
+}
+@media (min-width: 850px) {
+    main .main-section4 .section4-content .content-youtube, main .main-section4 .section4-content .content-maps{
+        width:47%;
+    }
+    main .main-section4 .section4-content .content-youtube .youtube-title-desktop,  main .main-section4 .section4-content .content-maps .maps-title-desktop{
+        text-align:center; 
+        margin-block:2rem 1rem; 
+        grid-column:1/3;
+        grid-row:1;
+    }
+    main .main-section4 .section4-content{
+        width:90%;
+        height: auto;
+        margin: 0 auto;
+        margin-block-start: 2rem;
+        display: flex;
+        justify-content: space-around;
+    }
+} 

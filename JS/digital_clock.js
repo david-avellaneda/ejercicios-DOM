@@ -12,7 +12,7 @@ export function digitalClock (clock, activateWatch, deactivateWatch) {
                 divClock.style.setProperty("justify-content","center");
                 divClock.style.setProperty("font-size","2rem");
                 divClock.style.setProperty("transition", "all .3s ease-in");
-            }, 500);
+            }, 1000);
             e.target.disabled = true; // Para que deshabilite el boton
         };
         if(e.target.matches(deactivateWatch)){
