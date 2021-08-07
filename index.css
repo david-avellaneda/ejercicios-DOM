@@ -74,7 +74,7 @@ header nav .menu .menu-item .menu-link{
 header nav .menu .menu-item:hover .menu-link{
     color:#000;
 }
-main .main-header{
+.main-header{
     position: fixed;
     width:100%;
     height:6rem;
@@ -85,7 +85,7 @@ main .main-header{
     font-size:1.3rem;
     text-align:center;
 }
-main .main-header .changeBackground{
+.main-header .changeBackground{
     width: 8rem;
     height: 3rem;
     background: #000;
@@ -97,7 +97,7 @@ main .main-header .changeBackground{
     justify-content: space-around;
     outline: none;
 }
-main .main-header .changeBackground .changeBackground-btn{ /* En CSS, ::after crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad content.Es en linea (inline) de forma predeterminada. AFTER ES COMO UN DIV, LA DIFERENCIA ES QUE NO SE ESCRIBE EL EL HTML SINO ACÁ */
+.main-header .changeBackground .changeBackground-btn{ /* En CSS, ::after crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad content.Es en linea (inline) de forma predeterminada. AFTER ES COMO UN DIV, LA DIFERENCIA ES QUE NO SE ESCRIBE EL EL HTML SINO ACÁ */
     /* content: ""; esto es obligatorio SI SE PONE ::after*/
     display: block;
     width: 3rem;
@@ -112,15 +112,15 @@ main .main-header .changeBackground .changeBackground-btn{ /* En CSS, ::after cr
     transform: translateX(0px);
     box-shadow: 0 0 .4rem .4rem rgba(0,0,0, .3);
 }
-main .main-header .changeBackground.active{ /* Cuando se le agregue la clase active cambié de fondo nuestro botón */
+.main-header .changeBackground.active{ /* Cuando se le agregue la clase active cambié de fondo nuestro botón */
     background-color: #000;
 }
-main .main-header .changeBackground.active .changeBackground-btn{
+.main-header .changeBackground.active .changeBackground-btn{
     /* right: 0; LO QUITO YA QUE VOY A REALIZAR UNA ANIMACIÓN QUE VAYA DE LEFT 0 A 40PX HACIA LA DERECHA*/ 
     left: 0;
     transform: translateX(50px)
 }
-main .main-header .changeBackground span{
+.main-header .changeBackground span{
     width: 3rem;
     height: 3rem;
     padding: .5rem;
@@ -129,7 +129,7 @@ main .main-header .changeBackground span{
     background: none;
     fill: #ffff;
 }
-main .scrollTop{
+.scrollTop{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -146,51 +146,53 @@ main .scrollTop{
     transition: all 2s ease;
     bottom:90vh;
 }
-main .scrollTop:hover{
+.scrollTop:hover{
     background-color:rgb(43, 39, 39);
     transition: all .4s ease-in-out;
 }
-main .scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .active en el html*/ 
+.scrollTop.active{ /* Que se le agregue a la clase .scollTop la clase .active en el html*/ 
     visibility: visible;
     opacity: 1;
     bottom:18vh;
     scroll-behavior: smooth;
 }
-main .scrollTop svg{
+.scrollTop svg{
     width:100%;
     transition: all .3s ease-in-out;
-}
-main .scrollTop:hover svg{
+} 
+.scrollTop:hover svg{
     fill:#f7df1e;
 }
 /* body.dark main .scrollTop:hover svg{
     
 } */
-main .main-section{
+.main-section{
     width:100%;
     height:100vh;
     padding-block-start:9rem;
     font-size:1.5rem;
 }
-main .main-section .section-title{
+.main-section .section-title{
     width:100%;
     display:flex;
     justify-content:center;
+    text-align: center;
     transition: all 2s ease;
+    margin-block-end: 5rem;
 }
 body.dark .main-section .section-title{
     color:#f7df1e;
 }
-body.dark main .main-section1 #realTimeClock .realTimeClock-title{
+body.dark .main-section1 #realTimeClock .realTimeClock-title{
     color:#ffff;
 }
-main .main-section1 .section1-clock-buttons, main .main-section1 .section1-music-buttons{
+.main-section1 .section1-clock-buttons, .main-section1 .section1-music-buttons{
     width:100%;
     display:flex;
     justify-content:center;
     margin-block-start:2rem;
 }
-main .main-section1 .section1-clock-buttons .clockButton{
+.main-section1 .section1-clock-buttons .clockButton{
     background-color:#ff0000;
     outline:none;
     margin-inline:1rem;
@@ -202,10 +204,10 @@ main .main-section1 .section1-clock-buttons .clockButton{
     cursor:pointer;
     transition: all .5s ease;
 }
-body.dark main .main-section1 .section1-clock-buttons .clockButton{
+body.dark .main-section1 .section1-clock-buttons .clockButton{
     background-color:#bb00ff;
 }
-main .main-section1 .section1-music-buttons .musicButton{
+.main-section1 .section1-music-buttons .musicButton{
     background-color:#3cb42c;
     outline:none;
     margin-inline:1rem;
@@ -217,18 +219,18 @@ main .main-section1 .section1-music-buttons .musicButton{
     cursor:pointer;
     transition: all .5s ease;
 }
-body.dark main .main-section1 .section1-music-buttons .musicButton{
+body.dark .main-section1 .section1-music-buttons .musicButton{
     background-color: #ff7100;
 }
-main .main-section1 .section1-clock-buttons .clockButton:hover, main .main-section1 .section1-music-buttons .musicButton:hover{
+.main-section1 .section1-clock-buttons .clockButton:hover, .main-section1 .section1-music-buttons .musicButton:hover{
     background-color:#2172eb;
     transition: all .2s ease;
 }
-body.dark main .main-section1 .section1-clock-buttons .clockButton:hover, body.dark main .main-section1 .section1-music-buttons .musicButton:hover{
+body.dark .main-section1 .section1-clock-buttons .clockButton:hover, body.dark .main-section1 .section1-music-buttons .musicButton:hover{
     background-color: #ffff;
     color: #000;
 }
-main .main-section2 .section2-stage{
+.main-section2 .section2-stage{
     width:90%;
     height:60vh;
     margin:0 auto;
@@ -236,7 +238,7 @@ main .main-section2 .section2-stage{
     background-color:rgb(24, 21, 21);
     display:flex;
 }
-main .main-section2 .section2-stage .section2-ball {
+.main-section2 .section2-stage .section2-ball {
     margin: auto;
     width:4rem;
     height:4rem;
@@ -244,16 +246,16 @@ main .main-section2 .section2-stage .section2-ball {
     border-radius:100%;
     transition:all .1s ease;
 }
-main .main-section3 .section3-content{
+.main-section3 .section3-content{
     text-align: center;
     font-size: 1.7rem;
     margin-block-start: 2rem;
     transition: all 2s ease;
 }
-body.dark main .main-section3 .section3-content{
+body.dark .main-section3 .section3-content{
     color: #ffff;
 }
-main .main-section3 .countdown{
+.main-section3 .countdown{
     width: 90%;
     margin: auto;
     display:flex;
@@ -263,11 +265,11 @@ main .main-section3 .countdown{
     font-family: 'Baloo Chettan 2', cursive;
     transition: all 2s ease;
 }
-main .main-section3 .countdown span{
+.main-section3 .countdown span{
     margin-block-end: 3rem;
     text-align: center;
 } 
-main .main-section3 .countdown .time-element{
+.main-section3 .countdown .time-element{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -283,23 +285,24 @@ main .main-section3 .countdown .time-element{
     overflow: hidden;
     transition: all 2s ease;
 }
-body.dark main .main-section3 .countdown .time-element{
+body.dark
+.main-section3 .countdown .time-element{
     background-color: #ff0000;
     color: #000;
 }
-main .main-section3 .countdown .timeMeasurements{
+.main-section3 .countdown .timeMeasurements{
     transition: all 2s ease;
 }
-body.dark main .main-section3 .countdown .timeMeasurements{
+body.dark .main-section3 .countdown .timeMeasurements{
     color: #ffff;
 }
-main .main-section4 .section4-content{
+.main-section4 .section4-content{
     width:90%;
     height: auto;
     margin: 0 auto;
     margin-block-start: 2rem;
 }
-main .main-section4 .section4-content .content-youtube, main .main-section4 .section4-content .content-maps{
+.main-section4 .section4-content .content-youtube, .main-section4 .section4-content .content-maps{
     width:100%;
     height: auto;
     margin-block-end: 4rem;
@@ -307,23 +310,41 @@ main .main-section4 .section4-content .content-youtube, main .main-section4 .sec
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 5fr;
 }
-main .main-section4 .section4-content .content-youtube .youtube-title-mobile, main .main-section4 .section4-content .content-maps .maps-title-mobile {
+.main-section4 .section4-content .content-youtube .youtube-title-mobile, .main-section4 .section4-content .content-maps .maps-title-mobile {
     text-align:center; 
     margin-block:2rem 1rem; 
     grid-column:1/3; 
     grid-row:1;
 }
+.main-section4 .section4-content > .content-youtube .youtube-title-desktop, .content-maps .maps-title-desktop{
+    transition: all 2s ease;
+}
+body.dark .main-section4 .section4-content .content-youtube .youtube-title-desktop, body.dark .main-section4 .section4-content .content-maps .maps-title-desktop{
+    color:#ff0000;
+}
+.main-section5 .content-operatingSystem-browser{
+    text-align: center;
+    font-size: 1.7rem;
+    color: blue;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    transition: all 2s ease;
+}
+body.dark .main-section5 .content-operatingSystem-browser{
+    color: #ffff;
+}
 @media (min-width: 850px) {
-    main .main-section4 .section4-content .content-youtube, main .main-section4 .section4-content .content-maps{
+    .main-section4 .section4-content .content-youtube, .main-section4 .section4-content .content-maps{
         width:47%;
     }
-    main .main-section4 .section4-content .content-youtube .youtube-title-desktop,  main .main-section4 .section4-content .content-maps .maps-title-desktop{
+    .main-section4 .section4-content .content-youtube .youtube-title-desktop,  .main-section4 .section4-content .content-maps .maps-title-desktop{
         text-align:center; 
         margin-block:2rem 1rem; 
         grid-column:1/3;
         grid-row:1;
     }
-    main .main-section4 .section4-content{
+    .main-section4 .section4-content{
         width:90%;
         height: auto;
         margin: 0 auto;
