@@ -35,7 +35,7 @@ d.addEventListener("DOMContentLoaded", () => {
     });
     const fifthLink = links[4];
     fifthLink.addEventListener("click", () => {
-        smoothScroll("#responsive-tester", "3000");
+        smoothScroll("#detección-de-plataforma", "3000");
     });
     responsive_object(
         "youtube", // ID youtube
