@@ -1,7 +1,5 @@
-export default function userAgent(operatingSystem, userBrowser) {
-    const $container = document.getElementById("user-agent"),
-        $operatingSystem = document.getElementById(operatingSystem),
-        $userBrowser = document.getElementById(userBrowser);
+export default function userAgent(operatingSystem) {
+    const $operatingSystem = document.getElementById(operatingSystem);
     const isMobile = {
         // El método match() se usa para obtener todas las ocurrencias de una expresión regular dentro de una cadena, en este caso dentro de userAgent.
         // i es una bandera de las expresiones regulares que busca sin importar mayúsculas y minúsculas
@@ -19,47 +17,57 @@ export default function userAgent(operatingSystem, userBrowser) {
             return this.linux() || this.mac() || this.windows()
         }
     };
-    const browser = {
-        chrome: () => navigator.userAgent.match(/chrome/i),
-        firefox: () => navigator.userAgent.match(/firefox/i),
-        opera: () => navigator.userAgent.match(/opera/i),
-        safari: () => navigator.userAgent.match(/safari/i),
-        edge: () => navigator.userAgent.match(/edg/i),
-        any: function () {
-            return this.edge() || this.firefox() || this.opera() || this.chrome() || this.safari()
-            // Que primero busque si existe edge ya que dentro de la cadena de texto que da User Agent sale chrome y safari de ultimas pone el navegador con el que está
+    const detetionBrowser = function() {
+        let browser;
+        let $containerLogos = document.querySelector(".browser-logos");
+        if(navigator.userAgent.match(/edg/i)) {
+            browser = "edge";
+            // CONTENIDO EXCLUSIVO
+            // $containerLogos.innerHTML = `<p><mark>Este contenido sólo se ve en Chrome lo siento:(</mark></p>`
+            // $containerLogos.style.setProperty("text-align", "center");
+            // $containerLogos.style.setProperty("font-size", "4rem");
+            // += para que le agregue el contenido que tiene por defecto, es decir el nombre del sistema operativo y navegador, si solo ponemos "=" imprimirá lo que se ponga como en este ejemplo si lo abrimos en edge
+        } else if(navigator.userAgent.match(/firefox/i)){
+            browser = "firefox";
+            $containerLogos.innerHTML += `<p style="margin-block-start:3rem"><mark>Este anuncio sólo se ve en Firefox 🤘</mark></p>`
+            $containerLogos.style.setProperty("text-align", "center");
+            $containerLogos.style.setProperty("font-size", "4rem");
+        } else if(navigator.userAgent.match(/opr/i)){
+            browser = "opera";
+        } else if(navigator.userAgent.match(/chrome|chromium|crios/i)){
+            browser = "chrome";
+            $containerLogos.innerHTML += `<p style="margin-block-start:3rem"><mark>Este anuncio sólo se ve en Chrome 😎</mark></p>`
+            $containerLogos.style.setProperty("text-align", "center");
+            $containerLogos.style.setProperty("font-size", "4rem");
+        } else if(navigator.userAgent.match(/safari/i)){
+            browser = "safari";
+        } else {
+            alert("Es otro navegador");         
+        }
+        const logo = document.querySelector(`.browser-logos .${browser}`); // Dentro de la clase .browser-logos seleccione el valor de la variable browser, entonces busca dentro del userAgent y que encuentre la primer coincidencia
+        if(logo !== ""){ // Si logo es diferente a vacío entonces
+            logo.style.opacity = "1";
         }
     };
     $operatingSystem.innerHTML = `<p class="content-system">${isMobile.any() ? isMobile.any() : isDesktop.any()}</p>`;
     const $contentSystem = document.querySelector('.content-system');
         $contentSystem.style.setProperty("color", "#f00143");
         $contentSystem.style.setProperty("margin-inline-start", ".5rem");
-    
-    $userBrowser.innerHTML = `<p class="content-browser">${browser.any()}</p>`;
-    const $contentBrowser = document.querySelector('.content-browser');
-        $contentBrowser.style.setProperty("color", "#1fa20f");
-        $contentBrowser.style.setProperty("margin-inline-start", ".5rem");
-        // CONTENIDO EXCLUSIVO
-    if(browser.edge()) {
-        $container.innerHTML = `<p><mark>Este contenido sólo se ve en Chrome lo siento:(</mark></p>`
-        $container.style.setProperty("text-align", "center");
-        $container.style.setProperty("font-size", "4rem");
-        // += para que le agregue el contenido que tiene por defecto, es decir el nombre del sistema operativo y navegador, si solo ponemos "=" imprimirá lo que se ponga como en este ejemplo si lo abrimos en edge
-    };
-    if(browser.chrome()) {
-        $container.innerHTML += `<p style="margin-block-start:3rem"><mark>Este anuncio sólo se ve en Chrome 😎</mark></p>`
-        $container.style.setProperty("text-align", "center");
-        $container.style.setProperty("font-size", "4rem");
-        };
-    if(browser.firefox()) {
-        $container.innerHTML += `<p style="margin-block-start:3rem"><mark>Este anuncio sólo se ve en Firefox 🤘</mark></p>`
-        $container.style.setProperty("text-align", "center");
-        $container.style.setProperty("font-size", "4rem");
-    };
+        $contentSystem.style.setProperty("transition", "all 2s ease");
     // Redirecciones
     // if(isMobile.android()){
     //     window.location.href = 'https://youtube.com'
             // Ya casi no se utilizan, mala prática
     // }
     //console.log(browser.edge())
+    
+    const showLogos = function () {
+        const $browser_btn = document.getElementById('browser-name');
+        let $browser_logos = document.querySelector('.browser-logos') ;
+        $browser_btn.addEventListener("click", () => {
+            $browser_logos.classList.add("show");
+        });
+    }
+    detetionBrowser();
+    showLogos();
 };
