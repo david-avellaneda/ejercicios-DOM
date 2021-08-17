@@ -8,6 +8,7 @@ import { darkMode } from "./dark_mode.js";
 import smoothScroll from "./smooth_link_scrolling.js";
 import responsive_object from "./responsive_object.js";
 import userAgent from "./device_detection.js";
+import networkStatus from "./network_status.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -59,8 +60,9 @@ d.addEventListener("DOMContentLoaded", () => {
     );
     userAgent("operating-system-name");
 });
-darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded y esta declaración la sacamos de este evento ya que no deja el mismo evento, ver js de dark mode
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
     d.addEventListener("keydown", (e) => moveBall(e, ".section2-stage", ".section2-ball"));
 });
+darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded y esta declaración la sacamos de este evento ya que no deja el mismo evento, ver js de dark mode
+networkStatus(); // Lo declaramos afuera porque si lo declaramos en DOMContentLoaded no sirve ya que tiene que estar detectando en cada momento más no cuando el documento esté cargado
