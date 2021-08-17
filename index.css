@@ -217,6 +217,7 @@ body.dark .main-section1 .section1-clock-buttons .clockButton:hover, body.dark .
     margin-block-start:2rem;
     background-color:rgb(24, 21, 21);
     display:flex;
+    transition: all 1s ease;
 }
 .main-section2 .section2-stage .section2-ball {
     margin: auto;
@@ -227,6 +228,8 @@ body.dark .main-section1 .section1-clock-buttons .clockButton:hover, body.dark .
     transition:all .1s ease;
 }
 .main-section3 .section3-content{
+    display: flex;
+    justify-content:center;
     text-align: center;
     font-size: 1.7rem;
     margin-block-start: 2rem;
@@ -234,6 +237,9 @@ body.dark .main-section1 .section1-clock-buttons .clockButton:hover, body.dark .
 }
 body.dark .main-section3 .section3-content{
     color: #ffff;
+}
+.main-section3 .section3-content h3 div{
+    visibility: hidden;
 }
 .main-section3 .countdown{
     width: 90%;
@@ -269,11 +275,19 @@ body.dark .main-section3 .countdown .time-element{
     background-color: #ff0000;
     color: #000;
 }
+.main-section3 .countdown .time-element > div{
+    visibility: hidden;
+}
 .main-section3 .countdown .timeMeasurements{
+    display: flex;
+    justify-content: center;
     transition: all 1s ease;
 }
 body.dark .main-section3 .countdown .timeMeasurements{
     color: #ffff;
+}
+.main-section3 .countdown .timeMeasurements h3 div{
+    visibility: hidden;
 }
 .main-section4 .section4-content{
     width:90%;
@@ -327,10 +341,34 @@ body.dark .main-section4 .section4-content .content-youtube .youtube-title-deskt
     font-weight: 500;
     flex-wrap: wrap;
     transition: all 1s ease;
-    margin-block-end: 6rem;
+    margin-block-end: 3rem;
 }
 body.dark .main-section5 .content-operatingSystem-browser{
     color: #ffff;
+}
+.main-section5 .content-operatingSystem-browser.browser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-section5 .content-operatingSystem-browser.browser .operatingBrowser{
+    display: flex;
+    padding: .7rem;
+    visibility: hidden;
+}
+.main-section5 .content-operatingSystem-browser.system{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-section5 .content-operatingSystem-browser.system .operatingSystem{
+    display: flex;
+    padding: .7rem;
+    visibility: hidden;
+}
+.main-section5 .content-operatingSystem-browser.system .skeleton div{
+    visibility: hidden;
 }
 .main-section5 .content-operatingSystem-browser .browser-name{
     width: 100%;
@@ -338,7 +376,6 @@ body.dark .main-section5 .content-operatingSystem-browser{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block-end: 2.5rem;
     transition: all 1s ease;
 }
 body.dark .main-section5 .content-operatingSystem-browser .browser-name{
@@ -354,7 +391,6 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-name{
     letter-spacing: .1rem;
     font-size: 1.6rem;
     overflow: hidden;
-    margin-block-end: 1rem;
     cursor: pointer;
     transition: all 1s ease;
 }
@@ -587,7 +623,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 }
 .loading{
     position: relative;
-    background-color: #e2e2e2 !important;
+    background-color: #d9d9d9 !important;
     overflow: hidden;
     transition: all 2s ease !important;
     border: none !important;
@@ -597,7 +633,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
     transform: translateX(-100%);
     animation: loading 2s infinite;
 }

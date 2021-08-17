@@ -12,7 +12,7 @@ export default function musicBotton (activateMusic, deactivateMusic) {
         $deactivateMusic.addEventListener("click", () => {
             clearTimeout(music);
             $music.pause(); 
-            $music.currentTime = 0;
+            $music.currentTime = 0; // Que empiece en el segundo 0
         });
     });
 };

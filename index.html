@@ -73,65 +73,99 @@
             </div>
             <section class="main-section main-section1" id="reloj-digital-y-alarma">
                 <div class="section-title">
-                    <h2 class="skeleton loading"><div class="contentVisibility">Reloj Digital y Música</div></h2>
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Reloj Digital y Música</div>
+                    </h2>
                 </div>
                 <div id="realTimeClock">
                     <h3 class="realTimeClock-title"></h3>
                 </div>
                 <div class="section1-clock-buttons">
-                    <button class="clockButton skeleton loading" id="activateWatch"><div class="contentVisibility">Iniciar Reloj</div></button>
-                    <button class="clockButton skeleton loading" id="deactivateWatch"><div class="contentVisibility">Detener Reloj</div></button>
+                    <button class="clockButton skeleton loading" id="activateWatch">
+                        <div class="contentVisibility">Iniciar Reloj</div>
+                    </button>
+                    <button class="clockButton skeleton loading" id="deactivateWatch">
+                        <div class="contentVisibility">Detener Reloj</div>
+                    </button>
                 </div>
                 <div class="section1-music-buttons">
-                    <button class="musicButton skeleton loading" id="activateMusic"><div class="contentVisibility">Iniciar Sonido</div></button>
-                    <button class="musicButton skeleton loading" id="deactivateMusic"><div class="contentVisibility">Detener Sonido</div></button>
+                    <button class="musicButton skeleton loading" id="activateMusic">
+                        <div class="contentVisibility">Iniciar Sonido</div>
+                    </button>
+                    <button class="musicButton skeleton loading" id="deactivateMusic">
+                        <div class="contentVisibility">Detener Sonido</div>
+                    </button>
                 </div>
             </section>
             <section class="main-section main-section2" id="eventos-del-teclado">
                 <div class="section-title">
-                    <h2>Evento del Teclado</h2>
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Evento del Teclado</div>
+                    </h2>
                 </div>
-                <div class="section2-stage " id="section2-stage">
-                    <div class="section2-ball" id="section2-ball"></div>
+                <div class="section2-stage skeleton loading" id="section2-stage">
+                    <div class="section2-ball skeleton loading" id="section2-ball"></div>
                 </div>
             </section>
             <section class="main-section main-section3" id="cuenta-regresiva">
                 <div class="section-title">
-                    <h2>Cuenta regresiva</h2>
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Cuenta regresiva</div>
+                    </h2>
                 </div>
-                <div>
-                    <h3 class="section3-content">Tiempo para que sea 24 de Diciembre 😎</h3>
+                <div class="section3-content">
+                    <h3 class="skeleton loading">
+                        <div class="contentVisibility">Tiempo para que sea 24 de Diciembre 😎</div>
+                    </h3>
                 </div>
                 <div class="countdown">
                     <span> <!-- Para que se ponga una al lado del otra se utiliza <span> -->
-                        <div class="time-element">
-                            <div id="days"></div>
+                        <div class="time-element skeleton loading">
+                            <div class="contentVisibility" id="days"></div>
                         </div>
-                        <div class="timeInDays timeMeasurements"></div>
+                        <div class="timeMeasurements">
+                            <h3 class="skeleton loading">
+                                <div class="timeInDays contentVisibility"></div>
+                            </h3>
+                        </div>
                     </span>
                     <span>
-                        <div class="time-element">
-                            <div id="hours"></div>
+                        <div class="time-element skeleton loading">
+                            <div class="contentVisibility" id="hours"></div>
                         </div>
-                        <div class="timeInHours timeMeasurements"></div>
+                        <div class="timeMeasurements">
+                            <h3 class="skeleton loading">
+                                <div class="timeInHours contentVisibility"></div>
+                            </h3>
+                        </div>
                     </span>
                     <span>
-                        <div class="time-element">
-                            <div id="minutes"></div>
+                        <div class="time-element skeleton loading">
+                            <div class="contentVisibility" id="minutes"></div>
                         </div>
-                        <div class="timeInMinutes timeMeasurements"></div>
+                        <div class="timeMeasurements">
+                            <h3 class="skeleton loading">
+                                <div class="timeInMinutes contentVisibility"></div>
+                            </h3>
+                        </div>
                     </span>
                     <span>
-                        <div class="time-element">
-                            <div id="seconds"></div>
+                        <div class="time-element skeleton loading">
+                            <div class="contentVisibility" id="seconds"></div>
                         </div>
-                        <div class="timeInSeconds timeMeasurements"></div>
+                        <div class="timeMeasurements">
+                            <h3 class="skeleton loading">
+                                <div class="timeInSeconds contentVisibility"></div>
+                            </h3>
+                        </div>
                     </span>
                 </div>
             </section>
             <section class="main-section main-section4" id="responsive-con-JavaScript"  style="height:auto;">
                 <div class="section-title">
-                    <h2>Responsive con JavaScript</h2> <!-- Diseño receptivo responsable -->
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Responsive con JavaScript</div>
+                    </h2> <!-- Diseño receptivo responsable -->
                 </div>
                 <div class="section4-content">
                     <div class="content-youtube" id="youtube"></div>
@@ -140,22 +174,36 @@
             </section>
             <section class="main-section main-section5" id="detección-de-plataforma">
                 <div class="section-title">
-                    <h2>Detección de Dispositivos<br>(User Agent)</h2>
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Detección de Dispositivos<br>(User Agent)</div> 
+                    </h2>
                 </div>
                 <div id="user-agent">
-                    <div class="content-operatingSystem-browser">
-                        <p>Tu sistema operativo es:</p>
-                        <div id="operating-system-name"></div>
+                    <div class="content-operatingSystem-browser browser">
+                        <div class="skeleton loading">
+                            <div class="operatingBrowser contentVisibility">
+                                <p>Tu sistema operativo es:</p>
+                                <p id="operating-system-name"></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content-operatingSystem-browser">
-                        <p class="browser-name" >Presiona el botón para saber qué navegador estás usando</p>
-                        <button class="browser-btn" id="browser-name">
-                            Saber<br>mi navegador
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                        </button>
+                    <div class="content-operatingSystem-browser system">
+                        <div class="skeleton loading" style="margin-block-end: 2rem;">
+                            <div class="operatingSystem contentVisibility">
+                                <p class="browser-name" >Presiona el botón para saber qué navegador estás usando</p>
+                            </div>
+                        </div>
+                        <div class="skeleton loading">
+                            <div class="contentVisibility">
+                                <button class="browser-btn" id="browser-name">
+                                    Saber<br>mi navegador
+                                    <span id="span1"></span>
+                                    <span id="span2"></span>
+                                    <span id="span3"></span>
+                                    <span id="span4"></span>
+                                </button>
+                            </div>
+                        </div>
                         <div class="browser-logos">
                             <img class="chrome" src="./assets/logos/google_chrome_logo.png" alt="Logo de Chrome" title="Google Chrome" />
                             <img class="firefox" src="./assets/logos/Firefox_logo.png" alt="Logo de Firefox" title="Mozilla Firefox" />
