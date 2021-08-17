@@ -1,7 +1,8 @@
 export default function networkStatus(){
     const isOnline = () => {
         let $modalContainer_online = document.getElementById("container-online"),
-        $modal_online = document.querySelectorAll(".modal-online")[0];
+            $modal_online = document.querySelectorAll(".modal-online")[0];
+        $modal_online.style.transform = "translateY(-250%)";
         let $modalContainer_offline = document.getElementById("container-offline"),
             $modal_offline = document.querySelectorAll(".modal-offline")[0],
             $close_offline = document.querySelectorAll(".closeBtn-offline")[0];
