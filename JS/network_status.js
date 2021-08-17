@@ -9,6 +9,7 @@ export default function networkStatus(){
     if(navigator.onLine) {
         $modalContainer_offline.style.opacity = "0";
         $modalContainer_offline.style.visibility = "hidden";
+        $modal_offline.style.transform = "translateY(250%)";
         $modalContainer_online.style.opacity= "1";
         $modalContainer_online.style.visibility = "visible";
         $modal_online.style.transform = "translateY(0%)";
