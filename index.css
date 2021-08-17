@@ -10,8 +10,8 @@ html{
 .animate__bounceIn{
     animation: bounceIn;
     animation-duration: 2s !important;
-    animation-delay: 2s !important;
-    animation-iteration-count: 5 !important;
+    animation-delay: 1s !important;
+    animation-iteration-count: 6 !important;
 }
 body{
     background:#ffff;
