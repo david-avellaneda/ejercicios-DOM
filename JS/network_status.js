@@ -8,7 +8,7 @@ export default function networkStatus(){
             $close_offline = document.querySelectorAll(".closeBtn-offline")[0];
         if(navigator.onLine) {
             document.body.style.setProperty("overflow-y", "hidden");
-            $close_offline.classList.remove("animate__bounceIn");
+            $close_offline.classList.remove("animate__rubberBand");
             $modalContainer_offline.style.opacity = "0";
             $modalContainer_offline.style.visibility = "hidden";
             $modal_offline.style.transform = "translateY(250%)";
@@ -26,10 +26,10 @@ export default function networkStatus(){
             $modalContainer_offline.style.opacity = "1";
             $modalContainer_offline.style.visibility = "visible";
             $modal_offline.style.transform = "translateY(0%)";
-            $close_offline.classList.toggle("animate__bounceIn");
+            $close_offline.classList.toggle("animate__rubberBand");
             $close_offline.addEventListener("click", function() {
                 document.body.style.setProperty("overflow-y", "visible");
-                $close_offline.classList.toggle("animate__bounceIn");
+                $close_offline.classList.toggle("animate__rubberBand");
                 $modalContainer_offline.style.opacity = "0";
                 $modalContainer_offline.style.visibility = "hidden";
                 $modal_offline.style.transform = "translateY(250%)";
@@ -38,7 +38,7 @@ export default function networkStatus(){
                 // console.log(e.target); // Para saber a qué le estamos dando click div section en toda la ventana-window
                 if(e.target === $modalContainer_offline){ // target detecta el evento, en este caso el click en el $modalContainer_offline
                     document.body.style.setProperty("overflow-y", "visible");
-                    $close_offline.classList.toggle("animate__bounceIn");
+                    $close_offline.classList.toggle("animate__rubberBand");
                     $modalContainer_offline.style.opacity = "0";
                     $modalContainer_offline.style.visibility = "hidden";
                     $modal_offline.style.transform = "translateY(250%)";

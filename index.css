@@ -7,8 +7,7 @@
 html{
      font-size:62.5% /* 1rem = 10px */
 }
-.animate__bounceIn{
-    animation: bounceIn;
+.animate__rubberBand{
     animation-duration: 2s !important;
     animation-delay: 1s !important;
     animation-iteration-count: 6 !important;
@@ -91,6 +90,7 @@ header nav .menu .menu-item:hover .menu-link{
     align-items:center;
     font-size:1.3rem;
     text-align:center;
+    z-index: 1;
 }
 .main-header .changeBackground{
     width: 8rem;
@@ -139,7 +139,7 @@ header nav .menu .menu-item:hover .menu-link{
 .main-section{
     width:100%;
     height:100vh;
-    padding-block-start:9rem;
+    padding-block-start:10rem;
     font-size:1.5rem;
 }
 .main-section .section-title{
@@ -152,6 +152,10 @@ header nav .menu .menu-item:hover .menu-link{
 }
 body.dark .main-section .section-title{
     color:#f7df1e;
+}
+.main-section .section-title h2 div{
+    padding: .5rem;
+    visibility: hidden;
 }
 body.dark .main-section1 #realTimeClock .realTimeClock-title{
     color:#ffff;
@@ -166,13 +170,16 @@ body.dark .main-section1 #realTimeClock .realTimeClock-title{
     background-color:#ff0000;
     outline:none;
     margin-inline:1rem;
-    padding:.7rem;
     border:solid 2px #000;
     border-radius:2rem;
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
-    transition: all .5s ease;
+    transition: all 1s ease;
+}
+.main-section1 .section1-clock-buttons .clockButton div {
+    margin: .7rem;
+    visibility: hidden;
 }
 body.dark .main-section1 .section1-clock-buttons .clockButton{
     background-color:#bb00ff;
@@ -181,13 +188,16 @@ body.dark .main-section1 .section1-clock-buttons .clockButton{
     background-color:#3cb42c;
     outline:none;
     margin-inline:1rem;
-    padding:.7rem;
     border:solid 2px #000;
     border-radius:2rem;
     color:#ffffff;
     font-weight:bold;
     cursor:pointer;
-    transition: all .5s ease;
+    transition: all 1s ease;
+}
+.main-section1 .section1-music-buttons .musicButton div{
+    margin: .7rem;
+    visibility: hidden;
 }
 body.dark .main-section1 .section1-music-buttons .musicButton{
     background-color: #ff7100;
@@ -574,6 +584,27 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 }
 .container-offline .containerContent-offline .statusMessage-offline p{
     font-size: 1.3rem;
+}
+.loading{
+    position: relative;
+    background-color: #e2e2e2 !important;
+    overflow: hidden;
+    transition: all 2s ease !important;
+    border: none !important;
+}
+.loading:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: translateX(-100%);
+    animation: loading 2s infinite;
+}
+@keyframes loading {
+    100%{
+        transform: translateX(100%);
+    }
 }
 .scrollTop{
     display:flex;

@@ -9,11 +9,12 @@ import smoothScroll from "./smooth_link_scrolling.js";
 import responsive_object from "./responsive_object.js";
 import userAgent from "./device_detection.js";
 import networkStatus from "./network_status.js";
+import { renderCar } from "./skeleton_load.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
-    digitalClock("#realTimeClock", "#activateWatch", "#deactivateWatch");
-    musicBotton("#activateMusic", "#deactivateMusic");
+    digitalClock("realTimeClock", "activateWatch", "deactivateWatch");
+    musicBotton("activateMusic", "deactivateMusic");
     countdown("Dec 24 2021 24:00:00");
     scrollTop(".scrollTop");
 
@@ -59,6 +60,9 @@ d.addEventListener("DOMContentLoaded", () => {
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.263701817781!2d-74.0782321852529!3d4.598120596659561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a7eccfe58f%3A0x99cb72b35351476!2sPlaza%20de%20Bol%C3%ADvar%20de%20Bogot%C3%A1!5e1!3m2!1ses!2sco!4v1627661077028!5m2!1ses!2sco" width="600" height="450" style="border:0; width:100%; height: 315px; grid-column:1/3;" allowfullscreen="" loading="lazy"></iframe>` // desktopContent, utilizamos las template strings
     );
     userAgent("operating-system-name");
+    setTimeout(() => {
+        renderCar();
+    }, 3000);
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
