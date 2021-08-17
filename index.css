@@ -7,9 +7,15 @@
 html{
      font-size:62.5% /* 1rem = 10px */
 }
+.animate__bounceIn{
+    animation: bounceIn;
+    animation-duration: 2s !important;
+    animation-delay: 2s !important;
+    animation-iteration-count: 5 !important;
+}
 body{
     background:#ffff;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark{ /* Cuando el body tenga una clase llamada dark */
     background: #000;
@@ -109,7 +115,7 @@ header nav .menu .menu-item:hover .menu-link{
     left: 0;
     right: unset; /* Para que cuando se le dé click lo ponga al la derecha por eso aún no se declara la posición, cuando se le de click left para a unset y right a 0 */
     border-radius: 10rem;
-    transition: all 2s ease;
+    transition: all 1s ease;
     transform: translateX(0px);
     box-shadow: 0 0 .4rem .4rem rgba(0,0,0, .3);
 }
@@ -141,7 +147,7 @@ header nav .menu .menu-item:hover .menu-link{
     display:flex;
     justify-content:center;
     text-align: center;
-    transition: all 2s ease;
+    transition: all 1s ease;
     margin-block-end: 5rem;
 }
 body.dark .main-section .section-title{
@@ -214,7 +220,7 @@ body.dark .main-section1 .section1-clock-buttons .clockButton:hover, body.dark .
     text-align: center;
     font-size: 1.7rem;
     margin-block-start: 2rem;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section3 .section3-content{
     color: #ffff;
@@ -227,7 +233,7 @@ body.dark .main-section3 .section3-content{
     justify-content: center;
     margin-block-start: 3rem;
     font-family: 'Baloo Chettan 2', cursive;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 .main-section3 .countdown span{
     margin-block-end: 3rem;
@@ -247,15 +253,14 @@ body.dark .main-section3 .section3-content{
     text-align: center;
     font-size: 3.5rem;
     overflow: hidden;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
-body.dark
-.main-section3 .countdown .time-element{
+body.dark .main-section3 .countdown .time-element{
     background-color: #ff0000;
     color: #000;
 }
 .main-section3 .countdown .timeMeasurements{
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section3 .countdown .timeMeasurements{
     color: #ffff;
@@ -281,7 +286,7 @@ body.dark .main-section3 .countdown .timeMeasurements{
     grid-row:1;
 }
 .main-section4 .section4-content > .content-youtube .youtube-title-desktop, .content-maps .maps-title-desktop{
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section4 .section4-content .content-youtube .youtube-title-desktop, body.dark .main-section4 .section4-content .content-maps .maps-title-desktop{
     color:#ff0000;
@@ -311,7 +316,7 @@ body.dark .main-section4 .section4-content .content-youtube .youtube-title-deskt
     color: blue;
     font-weight: 500;
     flex-wrap: wrap;
-    transition: all 2s ease;
+    transition: all 1s ease;
     margin-block-end: 6rem;
 }
 body.dark .main-section5 .content-operatingSystem-browser{
@@ -324,7 +329,7 @@ body.dark .main-section5 .content-operatingSystem-browser{
     justify-content: center;
     align-items: center;
     margin-block-end: 2.5rem;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section5 .content-operatingSystem-browser .browser-name{
     color:#ff6a00;
@@ -341,7 +346,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-name{
     overflow: hidden;
     margin-block-end: 1rem;
     cursor: pointer;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 body.dark .main-section5 .content-operatingSystem-browser .browser-btn{
     background-color: #ff000091;
