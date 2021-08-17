@@ -19,7 +19,7 @@ export default function networkStatus(){
                 $modalContainer_online.style.opacity= "0";
                 $modalContainer_online.style.visibility = "hidden";
                 $modal_online.style.transform = "translateY(-250%)";
-            }, 2000);
+            }, 5000);
         } else {
             document.body.style.setProperty("overflow-y", "hidden");
             $modalContainer_offline.style.opacity = "1";
