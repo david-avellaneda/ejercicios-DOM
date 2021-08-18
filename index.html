@@ -214,6 +214,17 @@
                     </div>
                 </div>
             </section>
+            <section>
+                <div class="select">
+                    <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+                  </div>
+                
+                  <div class="select">
+                    <label for="videoSource">Video source: </label><select id="videoSource"></select>
+                  </div>
+                
+                  <video autoplay muted playsinline></video>
+            </section>
         </main>
         <div class="scrollTop" id="scrollToTop">
             <?xml version="1.0" encoding="utf-8"?>
@@ -287,5 +298,6 @@
             </div>
         </div>
         <script src="./JS/index.js" type="module"></script>
+        <script src="./JS/webcam.js"></script>
     </body>
 </html>
