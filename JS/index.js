@@ -10,6 +10,7 @@ import responsive_object from "./responsive_object.js";
 import userAgent from "./device_detection.js";
 import networkStatus from "./network_status.js";
 import { renderCar } from "./skeleton_load.js";
+import ji from "./scroll_bar.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -63,6 +64,7 @@ d.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         renderCar();
     }, 3000);
+    ji()
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
