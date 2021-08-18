@@ -7,54 +7,13 @@
 html{
      font-size:62.5% /* 1rem = 10px */
 }
-::-webkit-scrollbar{
-    width: 0;
+body::-webkit-scrollbar{
+    width: 1.3rem;
+    background-color: #c9c9c97d;
 }
-.progressBar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 1.2rem;
-    background: linear-gradient(to top, #008aff, #00ffe7);
-    animation: animate 5s linear infinite;
-    z-index: 1000;
-}
-.progressBar:before{
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #008aff, #00ffe7);
-    filter: blur(10px);
-}
-.progressBar:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #008aff, #00ffe7);
-    filter: blur(30px);
-}
-.barLocation{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 1.2rem;
-    height: 100%;
-    background: rgba(255,255,255,0.05);
-    z-index: 1000;
-}
-@keyframes animate {
-    0%, 100%{
-        filter: hue-rotate(0deg);
-    }
-    50%{
-        filter: hue-rotate(360deg);
-    }
+body::-webkit-scrollbar-thumb{
+    background-color: #ff9d00;
+    border-radius: 1rem;
 }
 .animate__rubberBand{
     animation-duration: 2s !important;
