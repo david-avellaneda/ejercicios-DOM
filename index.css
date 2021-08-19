@@ -12,6 +12,7 @@ html{
     height:100vh;
     background-color: transparent;
     position: fixed;
+    cursor: progress;
     z-index: 1000;
 }
 body::-webkit-scrollbar{

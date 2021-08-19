@@ -1,7 +1,7 @@
 export const renderCar = () => {
     const $skeleton = document.querySelectorAll(".skeleton"),
     $contentVisibility = document.querySelectorAll(".contentVisibility"),
-    $cancelInteractions = document.getElementById("cancelInteractions-skeleton");
+    $cancelInteractions = document.getElementById("cancelInteractions");
     $skeleton.forEach((skeleton) => {
         skeleton.classList.remove("loading");
     });
