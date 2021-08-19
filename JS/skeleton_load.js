@@ -1,13 +1,12 @@
-const $skeleton = document.querySelectorAll(".skeleton");
-const $contentVisibility = document.querySelectorAll(".contentVisibility");
 export const renderCar = () => {
-    function ji(){
-        $skeleton.forEach((skeleton) => {
-            skeleton.classList.remove("loading");
-        });
-        $contentVisibility.forEach((contentVisibility) => {
-            contentVisibility.style.visibility = "visible";
-        });
-    }
-    ji()
+    const $skeleton = document.querySelectorAll(".skeleton"),
+    $contentVisibility = document.querySelectorAll(".contentVisibility"),
+    $cancelInteractions = document.getElementById("cancelInteractions-skeleton");
+    $skeleton.forEach((skeleton) => {
+        skeleton.classList.remove("loading");
+    });
+    $contentVisibility.forEach((contentVisibility) => {
+        contentVisibility.style.visibility = "visible";
+    });
+    $cancelInteractions.classList.remove("cancelInteractions-skeleton");
 };
