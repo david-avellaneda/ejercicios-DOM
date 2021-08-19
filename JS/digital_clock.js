@@ -6,8 +6,11 @@ export function digitalClock (clock, activateWatch, deactivateWatch) {
     let realTimeClock;
     $activateWatch.addEventListener("click", (e) => {
         realTimeClock = setInterval(() => {
-            let watch = new Date().toLocaleTimeString();
-            $clock.innerHTML = `<h3 class="realTimeClock-title">${watch}</h3>`;
+            let hours = new Date().getHours();
+            let minutes = new Date().getMinutes();
+            let seconds = new Date().getSeconds();
+            const format = hours >= 12 ? "PM" : "AM"; // Si el diviendo es menor al divisor 5 / 7 el módulo será el dividendo "5", y si el diviendo es mayor el módulo será el residuo
+            $clock.innerHTML = `<h3 class="realTimeClock-title">${hours % 12}:${minutes}:${seconds} ${format}</h3>`;
             divClock.style.setProperty("width","100%");
             divClock.style.setProperty("margin-block-start","3rem");
             divClock.style.setProperty("display","flex");
