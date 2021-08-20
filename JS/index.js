@@ -39,6 +39,10 @@ d.addEventListener("DOMContentLoaded", () => {
     fifthLink.addEventListener("click", () => {
         smoothScroll("#detección-de-plataforma", "3000");
     });
+    const sixthLink = links[5];
+    sixthLink.addEventListener("click", () => {
+        smoothScroll("#detección-de-cámara", "3000");
+    });
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 

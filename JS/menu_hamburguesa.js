@@ -19,5 +19,8 @@ export default function menuHamburguesa () {
         menuLink[4].addEventListener("click", () => {
             menu.classList.remove("mostrar");
         });
+        menuLink[5].addEventListener("click", () => {
+            menu.classList.remove("mostrar");
+        });
     });
 };  
