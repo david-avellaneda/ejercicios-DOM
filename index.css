@@ -177,6 +177,18 @@ body.dark .main-section .section-title{
     padding: .5rem;
     visibility: hidden;
 }
+.main-section1 #realTimeClock{
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    overflow: hidden;
+    transition: all 1.5s ease;
+}
+.main-section1 #realTimeClock .realTimeClock-title{
+    transition: all 1s ease;
+}
 body.dark .main-section1 #realTimeClock .realTimeClock-title{
     color:#ffff;
 }
