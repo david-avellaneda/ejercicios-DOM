@@ -28,14 +28,17 @@ function webcam(){
                             $listaDeDispositivos.appendChild(option);
                             let regExp_frontCamera = /front/ig;
                             let frontCamera = regExp_frontCamera.test(DEVICE.label);
+                            let regExp_backCamera = /back/ig;
+                            let backCamera = regExp_backCamera.test(DEVICE.label);
                             // console.log(frontCamera)
                             if(frontCamera) {
                                 option.text = DEVICE.label;
                                 $video.style.transform = "scaleX(-1)";
                             }
-                            let regExp_backCamera = /back/ig;
-                            let backCamera = regExp_backCamera.test(DEVICE.label);
-                            if(backCamera) $video.style.transform = "scaleX(1)";
+                            if(backCamera) {
+                                option.text = DEVICE.label
+                                $video.style.transform = "scaleX(1)";
+                            }
                             else option.text = DEVICE.label;
                         });
                     }
@@ -72,8 +75,6 @@ function webcam(){
                         $containerVideo.style.transform = "translateX(0%)";
                         if(navigator.userAgent.match(/linux/i) || navigator.userAgent.match(/mac os/i) || navigator.userAgent.match(/windows/i)){ // Detecta si es linux mac o windows para saber si es computador
                             $video.style.transform = "scaleX(-1)";
-                        } if (navigator.userAgent.match(/android/i)) {
-                            $video.style.transform = "scaleX(1)";
                         }
                         // Aquí ya tenemos permisos, ahora sí llenamos el select,
                         // pues si no, no nos daría el nombre de los dispositivos
