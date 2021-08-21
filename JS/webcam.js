@@ -3,13 +3,10 @@ function webcam(){
         $containerFalse = document.getElementById("container-false"),
         $containerVideo = document.getElementById('container-video'),
         $video = document.getElementById('video'),
-        $selectBox = document.getElementById('selectBox')
         $containerSelect = document.getElementById('active-camera'),
+        $containerSection6 = document.getElementById('container-section6'),
         $listaDeDispositivos = document.getElementById('listaDeDispositivos');
     $containerSelect.addEventListener('click', () => {
-        $selectBox.style.transform = "translateX(-500%)"
-        $selectBox.style.height = "0";
-        $listaDeDispositivos.style.marginBlockStart = "3rem"
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
         const llenarSelectConDispositivosDisponibles = () => {
@@ -56,9 +53,16 @@ function webcam(){
                         audio: false
                     },
                     function(streamObtenido) {
+                        $containerSection6.style.height = "0";
+                        $containerSection6.style.transform = "translateX(-100%)";
+                        $listaDeDispositivos.style.marginBlockEnd = "2rem"
                         $containerVideo.style.height = "auto";
-                        $containerVideo.style.marginBlockEnd = "10rem";
                         $containerVideo.style.transform = "translateX(0%)";
+                        if(navigator.userAgent.match(/linux/i) || navigator.userAgent.match(/mac os/i) || navigator.userAgent.match(/windows/i)){ // Detecta si es linux mac o windows para saber si es computador
+                            $video.style.transform = "scaleX(-1)";
+                        } if (navigator.userAgent.match(/android/i)) {
+                            $video.style.transform = "scaleX(1)";
+                        }
                         // Aquí ya tenemos permisos, ahora sí llenamos el select,
                         // pues si no, no nos daría el nombre de los dispositivos
                         llenarSelectConDispositivosDisponibles();
