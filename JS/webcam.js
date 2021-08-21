@@ -53,6 +53,7 @@ function webcam(){
                         audio: false
                     },
                     function(streamObtenido) {
+                        $listaDeDispositivos.innerHTML = ""
                         $containerSection6.style.height = "0";
                         $containerSection6.style.transform = "translateX(-100%)";
                         $listaDeDispositivos.style.marginBlockEnd = "2rem"
