@@ -9,11 +9,12 @@ function webcam(){
     $containerSelect.addEventListener('click', () => {
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
+        const videoDevices = [];
+
         const llenarSelectConDispositivosDisponibles = () => {
             $listaDeDispositivos.innerHTML = "";
             navigator.mediaDevices.enumerateDevices()
             .then((devices) => {
-                const videoDevices = [];
                 devices.forEach((DEVICE) => {
                     const tipo = DEVICE.kind;
                     if (tipo === "videoinput") videoDevices.push(DEVICE);
@@ -26,20 +27,7 @@ function webcam(){
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
                             $listaDeDispositivos.appendChild(option);
-                            let regExp_frontCamera = /front/ig;
-                            let frontCamera = regExp_frontCamera.test(DEVICE.label);
-                            let regExp_backCamera = /back/ig;
-                            let backCamera = regExp_backCamera.test(DEVICE.label);
-                            // console.log(frontCamera)
-                            if(frontCamera) {
-                                option.text = DEVICE.label;
-                                $video.style.transform = "scaleX(-1)";
-                            }
-                            if(backCamera) {
-                                option.text = DEVICE.label
-                                $video.style.transform = "scaleX(1)";
-                            }
-                            else option.text = DEVICE.label;
+                            option.text = DEVICE.label;
                         });
                     }
                 });
@@ -76,6 +64,28 @@ function webcam(){
                         if(navigator.userAgent.match(/linux/i) || navigator.userAgent.match(/mac os/i) || navigator.userAgent.match(/windows/i)){ // Detecta si es linux mac o windows para saber si es computador
                             $video.style.transform = "scaleX(-1)";
                         }
+                        navigator.mediaDevices.enumerateDevices()
+                            .then((devices) => {
+                                devices.forEach((DEVICE) => {
+                                    const tipo = DEVICE.kind;
+                                    if (tipo === "videoinput") videoDevices.push(DEVICE);
+                                });
+                                // Vemos si encontramos algún dispositivo, y en caso de que si, entonces llamamos a la función
+                                if (videoDevices.length > 0) {
+                                    // Llenar el select
+                                    $listaDeDispositivos.appendChild(document.createElement("option"));
+                                        videoDevices.forEach((DEVICE) => { // Este DEVICE no es el mismo de arriba ya que actua el scope
+                                            const option = document.createElement('option');
+                                            option.value = DEVICE.deviceId;
+                                            $listaDeDispositivos.appendChild(option);
+                                            let regExp_frontCamera = /front/ig;
+                                            let frontCamera = regExp_frontCamera.test(DEVICE.label);
+                                            if (frontCamera) $video.style.transform = "scaleX(-1)";
+                                            // console.log(frontCamera)
+                                            option.text = DEVICE.label;
+                                        });
+                                    }
+                                });
                         // Aquí ya tenemos permisos, ahora sí llenamos el select,
                         // pues si no, no nos daría el nombre de los dispositivos
                         llenarSelectConDispositivosDisponibles();
