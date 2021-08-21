@@ -10,17 +10,18 @@ function webcam(){
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
         const llenarSelectConDispositivosDisponibles = () => {
-            $listaDeDispositivos.innerHTML = ""
+            $listaDeDispositivos.innerHTML = "";
             navigator.mediaDevices.enumerateDevices()
-                .then((devices) => {
-                    const videoDevices = [];
-                    devices.forEach((DEVICE) => {
-                        const tipo = DEVICE.kind;
-                        if (tipo === "videoinput") videoDevices.push(DEVICE);
-                    });
-                    // Vemos si encontramos algún dispositivo, y en caso de que si, entonces llamamos a la función
-                    if (videoDevices.length > 0) {
-                        // Llenar el select
+            .then((devices) => {
+                const videoDevices = [];
+                devices.forEach((DEVICE) => {
+                    const tipo = DEVICE.kind;
+                    if (tipo === "videoinput") videoDevices.push(DEVICE);
+                });
+                // Vemos si encontramos algún dispositivo, y en caso de que si, entonces llamamos a la función
+                if (videoDevices.length > 0) {
+                    // Llenar el select
+                    $listaDeDispositivos.appendChild(document.createElement("option"));
                         videoDevices.forEach((DEVICE) => { // Este DEVICE no es el mismo de arriba ya que actua el scope
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
@@ -28,10 +29,10 @@ function webcam(){
                             let regExp_frontCamera = /front/i;
                             let frontCamera = regExp_frontCamera.test(DEVICE.label);
                             // console.log(frontCamera)
-                            if(frontCamera)option.text = "Cámara frontal";
+                            if(frontCamera) option.text = "Cámara frontal";
                             let regExp_backCamera = /back/i;
                             let backCamera = regExp_backCamera.test(DEVICE.label);
-                            if(backCamera) option.text = "Cámara frontal";
+                            if(backCamera) option.text = "Cámara trasera";
                             else option.text = DEVICE.label;
                         });
                     }
