@@ -26,7 +26,7 @@ function webcam(){
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
                             $listaDeDispositivos.appendChild(option);
-                            let regExp_frontCamera = /usb/ig;
+                            let regExp_frontCamera = /front/ig;
                             let frontCamera = regExp_frontCamera.test(DEVICE.label);
                             // console.log(frontCamera)
                             if(frontCamera) {
