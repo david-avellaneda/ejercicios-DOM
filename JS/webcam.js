@@ -33,7 +33,10 @@ function webcam(){
                                 option.text = DEVICE.label;
                                 $video.style.transform = "scaleX(-1)";
                             }
-                            option.text = DEVICE.label;
+                            let regExp_backCamera = /back/ig;
+                            let backCamera = regExp_backCamera.test(DEVICE.label);
+                            if(backCamera) $video.style.transform = "scaleX(1)";
+                            else option.text = DEVICE.label;
                         });
                     }
                 });
