@@ -26,11 +26,11 @@ function webcam(){
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
                             $listaDeDispositivos.appendChild(option);
-                            let regExp_frontCamera = /front/i;
+                            let regExp_frontCamera = /front/ig;
                             let frontCamera = regExp_frontCamera.test(DEVICE.label);
                             // console.log(frontCamera)
                             if(frontCamera) option.text = "Cámara frontal";
-                            let regExp_backCamera = /back/i;
+                            let regExp_backCamera = /back/ig;
                             let backCamera = regExp_backCamera.test(DEVICE.label);
                             if(backCamera) option.text = "Cámara trasera";
                             else option.text = DEVICE.label;
