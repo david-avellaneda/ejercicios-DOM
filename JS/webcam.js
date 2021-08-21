@@ -24,10 +24,11 @@ function webcam(){
                         videoDevices.forEach((DEVICE) => { // Este DEVICE no es el mismo de arriba ya que actua el scope
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
-                            if(option.label.match(/front/i)){
-                                option.text = "jijiji"
-                            }
-                            option.text = DEVICE.label;
+                            let regExp_frontCamera = /front/i;
+                            let frontCamera = regExp_frontCamera.test(DEVICE.label);
+                            // console.log(frontCamera)
+                            if(frontCamera) option.text = "Cámara frontal";
+                            // console.log(DEVICE.label);
                             $listaDeDispositivos.appendChild(option);
                         });
                     }
