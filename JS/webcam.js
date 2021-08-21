@@ -3,29 +3,91 @@ function webcam(){
         $containerFalse = document.getElementById("container-false"),
         $containerVideo = document.getElementById('container-video'),
         $video = document.getElementById('video'),
-        $select = document.getElementById('select');
-    let currentStream;
+        $select = document.getElementById('select'),
+        $listaDeDispositivos = document.getElementById('listaDeDispositivos');
     $select.addEventListener('click', () => {
-        navigator.mediaDevices
-            .getUserMedia({video:true, audio:false})
-            .then(stream => {
-                $video.srcObject = stream;
-                $video.play();
-                $containerVideo.style.width = "100%";
+        $containerVideo.style.width = "100%";
                 $containerVideo.style.height = "auto";
                 $containerVideo.style.marginBlockEnd = "10rem";
                 $containerVideo.style.transform = "translateX(0%)";
-            })
-            .catch(error => { // EN CASO DE QUE NO ACCEDA A LA CÁMARA WEB MANDE UN ERROR es decir si el usuario no da permiso de acceder a la cámara
-                const $content = document.createElement("p");
-                $content.textContent = "Lo siento, no me dejaste acceder a tu cámara 😞";
-                let $error = document.querySelector(".container-error");
-                $error.style.transform = "translateX(0%)";
-                $containerFalse.appendChild($content);
-                $containerTrue.style.width = "0";
-                $containerTrue.style.height = "0";
-                $containerTrue.style.overflow = "hidden";
-            });
+        // La función que es llamada después de que ya se dieron los permisos
+        // Lo que hace es llenar el select con los dispositivos obtenidos
+        const llenarSelectConDispositivosDisponibles = () => {
+            navigator.mediaDevices.enumerateDevices()
+                .then((devices) => {
+                    const videoDevices = [];
+                    devices.forEach((DEVICE) => {
+                        const tipo = DEVICE.kind;
+                        if (tipo === "videoinput") videoDevices.push(DEVICE);
+                    });
+                    // Vemos si encontramos algún dispositivo, y en caso de que si, entonces llamamos a la función
+                    if (videoDevices.length > 0) {
+                        // Llenar el select
+                        videoDevices.forEach((DEVICE) => { // Este DEVICE no es el mismo de arriba ya que actua el scope
+                            const option = document.createElement('option');
+                            option.value = DEVICE.deviceId;
+                            option.text = DEVICE.label;
+                            $listaDeDispositivos.appendChild(option);
+                        });
+                    }
+                });
+        };
+        (function () { 
+            //Aquí guardaremos el stream globalmente
+            let stream;
+            // Comenzamos pidiendo los dispositivos
+            navigator.mediaDevices.enumerateDevices()
+                .then((dispositivos) => {
+                    // Vamos a filtrarlos y guardar aquí los de vídeo
+                    const dispositivosDeVideo = [];
+                    // Recorrer y filtrar
+                    dispositivos.forEach(function (dispositivo) {
+                        const tipo = dispositivo.kind;
+                        if (tipo === "videoinput") dispositivosDeVideo.push(dispositivo);
+                    });
+                    // Vemos si encontramos algún dispositivo, y en caso de que si, entonces llamamos a la función
+                    // y le pasamos el id de dispositivo
+                    if (dispositivosDeVideo.length > 0) mostrarStream(dispositivosDeVideo[0].deviceId); 
+                    // Mostrar stream con el ID del primer dispositivo, luego el usuario puede cambiar
+                });
+            const mostrarStream = idDeDispositivo => {
+                navigator.getUserMedia({
+                        video: {deviceId: idDeDispositivo}, // Justo aquí indicamos cuál dispositivo usar
+                        audio: false
+                    },
+                    function(streamObtenido) {
+                        // Aquí ya tenemos permisos, ahora sí llenamos el select,
+                        // pues si no, no nos daría el nombre de los dispositivos
+                        llenarSelectConDispositivosDisponibles();
+                        // Escuchar cuando seleccionen otra opción y entonces llamar a esta función
+                        $listaDeDispositivos.onchange = () => {
+                            // Detener el stream
+                            if(stream){
+                                stream.getTracks().forEach((track) => {
+                                    track.stop();
+                                });
+                            }
+                            // Mostrar el nuevo stream con el dispositivo seleccionado
+                            mostrarStream($listaDeDispositivos.value);
+                        }
+                        // Simple asignación
+                        stream = streamObtenido;
+                        // Mandamos el stream de la cámara al elemento de vídeo
+                        $video.srcObject = stream;
+                        $video.play();
+                    }, function (error) { // EN CASO DE QUE NO ACCEDA A LA CÁMARA WEB MANDE UN ERROR es decir si el usuario no da permiso de acceder a la cámara
+                        console.log("Permiso denegado o error: ", error);
+                        const $content = document.createElement("p");
+                        $content.textContent = "Lo siento, no me dejaste acceder a tu cámara 😞";
+                        let $error = document.querySelector(".container-error");
+                        $error.style.transform = "translateX(0%)";
+                        $containerFalse.appendChild($content);
+                        $containerTrue.style.width = "0";
+                        $containerTrue.style.height = "0";
+                        $containerTrue.style.overflow = "hidden";
+                    });
+            }
+        })();
     });
 };
 webcam()

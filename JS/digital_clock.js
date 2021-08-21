@@ -14,14 +14,13 @@ export function digitalClock (clock, activateWatch, deactivateWatch) {
             let hours = new Date().getHours(),
                 minutes = new Date().getMinutes(),
                 seconds = new Date().getSeconds();
-            hours = ("0" + hours).slice(-2);
+            const format = hours >= 12 ? "PM" : "AM"; // Si el diviendo es menor al divisor 5 / 7 el módulo será el dividendo "5", y si el diviendo es mayor el módulo será el residuo
             minutes = ("0" + minutes).slice(-2);
             seconds = ("0" + seconds).slice(-2);
-            const format = hours >= 12 ? "PM" : "AM"; // Si el diviendo es menor al divisor 5 / 7 el módulo será el dividendo "5", y si el diviendo es mayor el módulo será el residuo
-            // Operador ternariosin declarar variables
-            hours % 12 === 0 
-                ? $clock.innerHTML = `<h3 class="realTimeClock-title">${hours}:${minutes}:${seconds} ${format}</h3>`
-                : $clock.innerHTML = `<h3 class="realTimeClock-title">${hours % 12}:${minutes}:${seconds} ${format}</h3>`;
+            $clock.innerHTML = `
+                <h3 class="realTimeClock-title">${("0" + hours % 12).slice(-2)}:${minutes}:${seconds} ${format}</h3>
+            `;
+            // Si el diviendo es menor al divisor 5 / 7 el módulo será el dividendo "5", y si el diviendo es mayor el módulo será el residuo
             divClock.style.setProperty("width","100%");
             divClock.style.setProperty("height","3rem");
             divClock.style.setProperty("transform", "translateX(0%)")
