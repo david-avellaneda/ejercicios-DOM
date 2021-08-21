@@ -28,11 +28,11 @@ function webcam(){
                             let regExp_frontCamera = /front/i;
                             let frontCamera = regExp_frontCamera.test(DEVICE.label);
                             // console.log(frontCamera)
-                            if(frontCamera) option.text = "Cámara frontal";
+                            if(frontCamera)option.text = "Cámara frontal";
                             let regExp_backCamera = /back/i;
                             let backCamera = regExp_backCamera.test(DEVICE.label);
                             if(backCamera) option.text = "Cámara frontal";
-                            option.text = DEVICE.label;
+                            else option.text = DEVICE.label;
                         });
                     }
                 });
