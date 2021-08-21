@@ -3,13 +3,9 @@ function webcam(){
         $containerFalse = document.getElementById("container-false"),
         $containerVideo = document.getElementById('container-video'),
         $video = document.getElementById('video'),
-        $select = document.getElementById('select'),
+        $containerSelect = document.getElementById('active-camera'),
         $listaDeDispositivos = document.getElementById('listaDeDispositivos');
-    $select.addEventListener('click', () => {
-        $containerVideo.style.width = "100%";
-                $containerVideo.style.height = "auto";
-                $containerVideo.style.marginBlockEnd = "10rem";
-                $containerVideo.style.transform = "translateX(0%)";
+    $containerSelect.addEventListener('click', () => {
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
         const llenarSelectConDispositivosDisponibles = () => {
@@ -56,6 +52,9 @@ function webcam(){
                         audio: false
                     },
                     function(streamObtenido) {
+                        $containerVideo.style.height = "auto";
+                        $containerVideo.style.marginBlockEnd = "10rem";
+                        $containerVideo.style.transform = "translateX(0%)";
                         // Aquí ya tenemos permisos, ahora sí llenamos el select,
                         // pues si no, no nos daría el nombre de los dispositivos
                         llenarSelectConDispositivosDisponibles();

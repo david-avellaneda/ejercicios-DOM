@@ -525,6 +525,9 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     margin: auto;
     display: flex;
     justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin-block-end: 6rem;
 }
 .main-section6 .container-section6 .selectBox{
     width: 85%;
@@ -547,22 +550,8 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     position: relative;
     border: none;
 }
-.main-section6 .container-section6 .selectBox .select.active, .main-section6 .container-section6 .selectBox .select:hover{ 
-    /* Cuando tenga la clase active y cuando se le haga hover*/
+.main-section6 .container-section6 .selectBox .select:hover{ 
     box-shadow: 4px 4px 9px 1px rgb(0 0 0 / 50%);
-}
-.main-section6 .container-section6 .selectBox .select.active:before{
-    content:"";
-    display: block;
-    height: 0;
-    width: 0;
-    border-top: 1.5rem solid #0b8eff;
-    border-right: 1.5rem solid transparent;
-    border-bottom: 1.5rem solid transparent;
-    border-left: 1.5rem solid transparent;
-    position: absolute;
-    bottom: -3rem;
-    left: calc(50% - 1.5rem);
 }
 .main-section6 .container-section6 .selectBox .title{
     margin-block-end: 1rem;
@@ -586,10 +575,11 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     transform: translateX(-100%);
 }
 .main-section6 .container-video{
-    width: 0;
+    width: 100%;
+    height: 0;
     display: flex;
     justify-content: center;
-    transition: all 2.5s ease;
+    transition: all 1.5s ease;
     transform: translateX(-100%);
 }
 .main-section6 .container-video .video{
