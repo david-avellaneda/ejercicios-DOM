@@ -527,7 +527,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    margin-block-end: 6rem;
+    margin-block-end: 3rem;
 }
 .main-section6 .container-section6 .selectBox{
     width: 85%;
@@ -535,6 +535,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    transition: all 4s ease;
 }
 .main-section6 .container-section6 .selectBox .select{
     width: 100%;
@@ -546,8 +547,6 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     justify-content: space-between;
     padding: 1.5rem 2.5rem;
     transition: all .2s ease;
-    margin-block-end: 3rem;
-    position: relative;
     border: none;
 }
 .main-section6 .container-section6 .selectBox .select:hover{ 
@@ -566,6 +565,11 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 .main-section6 .container-section6 .selectBox .select .angle_down{
     width: 2rem;
 }
+.main-section6 .container-section6 #listaDeDispositivos{
+    margin-block-start: 5rem;
+    min-width: 19rem;
+    transition: all 3s ease;
+}
 .main-section6 .container-error{
     width: 100%;
     height: auto;
@@ -579,14 +583,13 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     height: 0;
     display: flex;
     justify-content: center;
-    transition: all 1.5s ease;
+    transition: all .8s ease;
     transform: translateX(-100%);
 }
 .main-section6 .container-video .video{
     width: 80%;
-    transform: scaleX(-1);
     max-width: 60rem;
-    border-radius: 6rem;
+    border-radius: 3rem;
     box-shadow: -9px 9px 15px 2px rgb(0 0 0 / 50%);
 }
 .container-online{

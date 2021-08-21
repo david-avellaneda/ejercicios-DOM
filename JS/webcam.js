@@ -3,9 +3,13 @@ function webcam(){
         $containerFalse = document.getElementById("container-false"),
         $containerVideo = document.getElementById('container-video'),
         $video = document.getElementById('video'),
+        $selectBox = document.getElementById('selectBox')
         $containerSelect = document.getElementById('active-camera'),
         $listaDeDispositivos = document.getElementById('listaDeDispositivos');
     $containerSelect.addEventListener('click', () => {
+        $selectBox.style.transform = "translateX(-500%)"
+        $selectBox.style.height = "0";
+        $listaDeDispositivos.style.marginBlockStart = "3rem"
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
         const llenarSelectConDispositivosDisponibles = () => {
