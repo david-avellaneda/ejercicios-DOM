@@ -24,6 +24,9 @@ function webcam(){
                         videoDevices.forEach((DEVICE) => { // Este DEVICE no es el mismo de arriba ya que actua el scope
                             const option = document.createElement('option');
                             option.value = DEVICE.deviceId;
+                            if(option.label.match(/front/i)){
+                                option.text = "jijiji"
+                            }
                             option.text = DEVICE.label;
                             $listaDeDispositivos.appendChild(option);
                         });
