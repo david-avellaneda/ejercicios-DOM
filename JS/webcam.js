@@ -10,6 +10,7 @@ function webcam(){
         // La función que es llamada después de que ya se dieron los permisos
         // Lo que hace es llenar el select con los dispositivos obtenidos
         const llenarSelectConDispositivosDisponibles = () => {
+            $listaDeDispositivos.innerHTML = ""
             navigator.mediaDevices.enumerateDevices()
                 .then((devices) => {
                     const videoDevices = [];
@@ -53,7 +54,6 @@ function webcam(){
                         audio: false
                     },
                     function(streamObtenido) {
-                        $listaDeDispositivos.innerHTML = ""
                         $containerSection6.style.height = "0";
                         $containerSection6.style.transform = "translateX(-100%)";
                         $listaDeDispositivos.style.marginBlockEnd = "2rem"
