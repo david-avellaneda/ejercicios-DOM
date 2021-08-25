@@ -100,6 +100,9 @@ header nav .menu .menu-item .menu-link{
 header nav .menu .menu-item:hover .menu-link{
     color:#000;
 }
+main{
+    overflow: hidden;
+}
 .main-header{
     position: fixed;
     width:100%;
@@ -519,78 +522,90 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     padding: .4rem;
     opacity: 0.4;
 }
-.main-section6 .container-section6{
+.main-section6 .section6-content{
     width: 100%;
     margin: auto;
     display: flex;
-    justify-content:center;
-    align-items: center;
     flex-direction: column;
-    transition: all 1.3s ease;
 }
-.main-section6 .container-section6 .selectBox{
-    width: 100%;
-    max-width: 36rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-inline: 3rem;
-}
-.main-section6 .container-section6 .selectBox .select{
-    width: 100%;
-    background-color: #f1f1f1;
-    box-shadow:2px 2px 2px rgb(0 0 0 / 50%);
-    border-radius: 2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 2.5rem;
-    border: none;
-}
-.main-section6 .container-section6 .selectBox .select:hover{ 
-    box-shadow: 4px 4px 9px 1px rgb(0 0 0 / 50%);
-}
-.main-section6 .container-section6 .selectBox .title{
-    margin-block-end: 1rem;
-    color: #000;
-    font-weight:600;
-    font-size: 2rem;
-}
-.main-section6 .container-section6 .selectBox .description{
-    font-size: 1.6rem;
-    color: #5a5a5a;
-}
-.main-section6 .container-section6 .selectBox .select .angle_down{
-    width: 2rem;
-}
-.main-section6 .container-true .container-video .device-list{
-    margin-block-start: 5rem;
-    min-width: 19rem;
-}
-.main-section6 .container-error{
-    width: 100%;
+.main-section6 .section6-content .section6-buttons{
+    width: 32rem;
     height: auto;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transition: all 2s ease;
-    transform: translateX(-100%);
+    justify-content: space-evenly;
+    margin: auto;
 }
-.main-section6 .container-video{
-    width: 100%;
+.main-section6 .section6-content .section6-buttons .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section6 .section6-content .section6-buttons .input-camera{
+    width: 0;
     height: 0;
+}
+.main-section6 .section6-content .section6-buttons .button-camera{
+    width: 9rem;
+    background-color: #36ea10;
+    padding: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: solid .3rem #000;
+}
+.main-section6 .section6-content .section6-buttons .input-gallery{
+    width: 0;
+    height: 0;
+}
+.main-section6 .section6-content .section6-buttons .button-gallery{
+    width: 9rem;
+    background-color: #ed0808;
+    padding: 1.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+    border: solid .3rem #000;
+}
+.main-section6 .section6-content .section6-buttons .button-gallery svg{
+    width: 4.4rem;
+}
+.main-section6 .section6-content .section6-buttons .buttons h4{
+    text-align: center;
+    margin-block-start: .8rem;
+}
+.main-section6 .section6-content .photo-video{
+    position: relative;
+}
+.main-section6 .section6-content .photo-video .container-photo{
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: all 3s ease;
-    transform: translateX(-100%);
+    margin-block: 5rem 9rem;
+    transition: all 1.5s ease;
 }
-.main-section6 .container-video .video{
+.main-section6 .section6-content .photo-video .container-photo img{
     width: 80%;
     max-width: 60rem;
-    border-radius: 3rem;
-    box-shadow: -9px 9px 15px 2px rgb(0 0 0 / 50%);
+    border-radius: 5rem;
+}
+.main-section6 .section6-content .photo-video .container-video{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    transform: translateX(-120%);
+    transition: all 3s ease;
+}
+.main-section6 .section6-content .photo-video .container-video video{
+    width: 55rem;
+    height: 0;
+    transform: scaleX(-1);
+    border-radius: 5rem;
+    box-shadow: -9px 9px 10px 2px rgb(0 0 0 / 50%);
+}
+@media (min-width: 900px){
+    .main-section6 .section6-content .section6-buttons{
+        width: 70rem;
+        margin-block-end: 5rem;
+    }
 }
 .container-online{
     opacity: 0;

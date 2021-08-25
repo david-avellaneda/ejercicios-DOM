@@ -15,7 +15,13 @@
         <div class="cancelInteractions-skeleton" id="cancelInteractions"></div>
         <header> 
             <div class="header-iconMenu" id="btnMenu"> 
-                <img src="./menu.svg" alt="Icono de menú" />
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
+                    <g id="surface1">
+                        <path d="M40,6H4C1.8,6,0,7,0,8.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,6,40,6z"/>
+                        <path d="M40,14.7H4c-2.2,0-4,1-4,2.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,14.7,40,14.7z"/>
+                        <path d="M40,24.3H4c-2.2,0-4,1-4,2.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,24.3,40,24.3z"/>
+                    </g>
+            </svg>
             </div>
             <nav class="navbar"> 
                 <ul class="menu" id="menu">
@@ -200,11 +206,22 @@
                     </div>
                 </div>
             </section>
-            <section class="main-section main-section6" id="detección-de-cámara">
+            <section class="main-section main-section6" id="detección-de-cámara" style="height:auto; min-height: 55rem;">
                 <div class="section-title">
                     <h2 class="skeleton loading">
                         <div class="contentVisibility">Detección de cámara </div>
                     </h2>
+                </div>
+                <div class="section6-content">
+                    <div class="section6-buttons" id="section6-buttons"></div>
+                    <div class="photo-video">
+                        <div class="container-photo" id="container-photo">
+                            <img id="photo" />
+                        </div>
+                        <div class="container-video" id="container-video">
+                            <video id="video"></video>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
