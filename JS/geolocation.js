@@ -21,7 +21,7 @@ export default function detectGeolocation(id) {
                     <li>Latitud: <b>${coordinates.accuracy}</b> metros, es decir <br> estás en un radio de ${coordinates.accuracy} metros</li>
                 </ul>
                 <div>
-                    <a href="https://www.google.com/maps/@${coordinates.latitude},${coordinates.longitude},15z" target="_blank" rel="noreferrer noopener">Ver en Google Maps</a>
+                    <a href="https://www.google.com/maps/@${coordinates.latitude},${coordinates.longitude},18z" target="_blank" rel="noreferrer noopener">Ver en Google Maps</a>
                 </div>`;
             if(window.matchMedia("(min-width: 900px").matches){
                 const $container_message_on_desktop = document.createElement("div");
