@@ -652,7 +652,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 }
 .main-section7 .section7-content .location-container .location-content{
     width: 30rem;
-    min-height: 21rem;
+    height: auto;
     background: #17c32c;
     padding: 2rem 5rem;
     border-radius: 2rem;
