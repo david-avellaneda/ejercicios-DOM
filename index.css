@@ -553,6 +553,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     border: solid .3rem #000;
 }
 .main-section6 .section6-content .section6-buttons .button-camera svg{
+    width: 100%;
     padding: 1.5rem;
     visibility: hidden;
 }
@@ -639,6 +640,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     margin-block-end: 1rem;
 }
 .main-section7 .section7-content .location-btn .icon svg{
+    width: 100%;
     padding: 1.5rem;
     visibility: hidden;
 }
