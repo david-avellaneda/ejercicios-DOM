@@ -45,14 +45,28 @@ export default function webcam(id, mediaQuery){
                             $video.play();
                             $video.style.transform = "scaleX(-1)";
                             $video.style.height = "auto";
+                            $containerVideo.style.margin = "0 0 9rem";
+                            $containerVideo.style.transform = "translateX(0)";
+                            $containerVideo.style.position = "inherit";
                         })
                         .catch(err => {
-
+                            const $photoVideo = document.getElementById("photo-video");
+                            $photoVideo.innerHTML = `
+                                <h4 style="margin-block-end:1.5rem;">Lo siento no pude acceder a la cámara de tu computadora :(</h4>
+                                <p style="margin-block-end:.8rem;color: #0c57ff;">Esto pudo ser ocasionado por:</p>
+                                <ul>
+                                    <li>No me diste acceso a tu cámara cuando presionaste el icono de la cámara que está en color verde 😞.</li>
+                                    <li>Tu navegador no soporta algunos caracteres, te recomiendo abrir esta página desde el navegador Google Chrome.</li>
+                                    <li>No cuentas con una cámara en tu computadora.</li>
+                                </ul>
+                            `;
+                            $photoVideo.style.display = "flex",
+                            $photoVideo.style.alignItems = "center";
+                            $photoVideo.style.flexDirection = "column";
                         });
+                        // El método then() retorna una Promesa. Recibe dos argumentos: funciones callback  para los casos de éxito y fallo de Promise. EN CASO DE QUE SEA UN ÉXITO ME VA A ESTAR MANDANDO LA INFORMACIÓN DE (stream) LA CÁMARA WEB
+                        // El método catch() retorna una Promise y solo se ejecuta en los casos en los que la promesa se marca como Reject. EN CASO DE QUE NO ACCEDA A LA CÁMARA WEB MANDE UN ERROR es decir si el usuario no da permiso de acceder a la cámara
                 };
-                $containerVideo.style.margin = "0 0 9rem";
-                $containerVideo.style.transform = "translateX(0)";
-                $containerVideo.style.position = "inherit";
                 $containerPhoto.style.height = "0";
                 $containerPhoto.style.margin = "0";
                 $containerPhoto.style.transform = "translateX(100%)";
@@ -111,15 +125,16 @@ export default function webcam(id, mediaQuery){
                     $photo.src = URL.createObjectURL(e.target.files[0]);
                     $photo.style.border = "solid .3rem #000";
                 });
-            });
+            }); 
             $openGallery_mobile.addEventListener('click', () => {
                 $gallery_mobile.click();
                 $gallery_mobile.addEventListener('change', (e) => {
                     $photo.src = URL.createObjectURL(e.target.files[0]);
+                    $photo.style.border = "solid .3rem #000";
                 });
             });
         };
     };
-    breakpoint.addListener(responsive); // Esta líne se puede con el evento rize y la de abajo con window.onload
+    breakpoint.addEventListener("change", responsive);
     responsive(breakpoint);
 };

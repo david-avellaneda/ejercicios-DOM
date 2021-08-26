@@ -534,6 +534,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    margin-block-end: 3rem;
 }
 .main-section6 .section6-content .section6-buttons .buttons{
     display: flex;
@@ -578,7 +579,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-block: 5rem 9rem;
+    margin-block: 0 0 9rem;
     transition: all 1.5s ease;
 }
 .main-section6 .section6-content .photo-video .container-photo img{

@@ -42,7 +42,7 @@ export default function userAgent(operatingSystem) {
         } else if(navigator.userAgent.match(/safari/i)){
             browser = "safari";
         } else {
-            alert("Es otro navegador");         
+            alert("No sé qué navegador usas :(");         
         }
         const logo = document.querySelector(`.browser-logos .${browser}`); // Dentro de la clase .browser-logos seleccione el valor de la variable browser, entonces busca dentro del userAgent y que encuentre la primer coincidencia
         if(logo !== ""){ // Si logo es diferente a vacío entonces
