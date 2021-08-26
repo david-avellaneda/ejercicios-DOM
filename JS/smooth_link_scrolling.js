@@ -1,5 +1,5 @@
-export default function smoothScroll(objective, duration) {
-    let elementObjective = document.querySelector(objective),
+export default function smoothScroll(id, duration) {
+    let elementObjective = document.getElementById(id),
         elementPosition = elementObjective.getBoundingClientRect().top, // devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización es este cuánto está separado del top
         initialPosition = window.pageYOffset, // devuelve el número de píxeles que el documento se desplaza actualmente a lo largo del eje vertical
         initialTime = null;

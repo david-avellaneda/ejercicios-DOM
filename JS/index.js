@@ -11,6 +11,7 @@ import userAgent from "./device_detection.js";
 import networkStatus from "./network_status.js";
 import { renderCar } from "./skeleton_load.js";
 import webcam from "./webcam.js";
+import detectGeolocation from "./geolocation.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -20,17 +21,19 @@ d.addEventListener("DOMContentLoaded", () => {
     scrollTop(".scrollTop");
     const links = document.querySelectorAll(".menu-link");
     const firstLink = links[0];
-    firstLink.addEventListener("click", () => smoothScroll("#reloj-digital-y-alarma", "3000"));
+    firstLink.addEventListener("click", () => smoothScroll("reloj-digital-y-alarma", "3000"));
     const secondLink = links[1];
-    secondLink.addEventListener("click", () => moothScroll("#eventos-del-teclado", "3000"));
+    secondLink.addEventListener("click", () => smoothScroll("eventos-del-teclado", "3000"));
     const thirdLink = links[2];
-    thirdLink.addEventListener("click", () => smoothScroll("#cuenta-regresiva", "3000"));
+    thirdLink.addEventListener("click", () => smoothScroll("cuenta-regresiva", "3000"));
     const fourthLink = links[3];
-    fourthLink.addEventListener("click", () => moothScroll("#responsive-con-JavaScript", "3000"));
+    fourthLink.addEventListener("click", () => smoothScroll("responsive-con-javascript", "3000"));
     const fifthLink = links[4];
-    fifthLink.addEventListener("click", () => smoothScroll("#detección-de-plataforma", "3000"));
+    fifthLink.addEventListener("click", () => smoothScroll("deteccion-de-plataforma", "3000"));
     const sixthLink = links[5];
-    sixthLink.addEventListener("click", () => smoothScroll("#detección-de-cámara", "3000"));
+    sixthLink.addEventListener("click", () => smoothScroll("deteccion-de-camara", "3000"));
+    const seventhLink = links[6];
+    seventhLink.addEventListener("click", () => smoothScroll("deteccion-de-ubicacion", "3000"));
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 
@@ -56,16 +59,17 @@ d.addEventListener("DOMContentLoaded", () => {
         renderCar();
     }, 3000);
     webcam("section6-buttons", "(min-width:900px)");
+    detectGeolocation("location-content");
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
     d.addEventListener("keydown", (e) => moveBall(e, ".section2-stage", ".section2-ball"));
 });
-darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded y esta declaración la sacamos de este evento ya que no deja el mismo evento, ver js de dark mode
-networkStatus(); // Lo declaramos afuera porque si lo declaramos en DOMContentLoaded no sirve ya que tiene que estar detectando en cada momento más no cuando el documento esté cargado
 document.addEventListener("keydown", (e) => {
     // ESTOS SHORCUTS PUEDEN SER A MI GUSTO, LAS TECLAS QUE YO QUIERA, ETC
     if(e.altKey && e.key === "a"){ // Si presiona la tecla Alt y después la letra a bota una alerta
         alert("Haz lanzado un alerta con el teclado");
     };
 });
+darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded y esta declaración la sacamos de este evento ya que no deja el mismo evento, ver js de dark mode
+networkStatus(); // Lo declaramos afuera porque si lo declaramos en DOMContentLoaded no sirve ya que tiene que estar detectando en cada momento más no cuando el documento esté cargado

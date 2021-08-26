@@ -4,23 +4,15 @@ export default function menuHamburguesa () {
         menuLink = document.querySelectorAll(".menu-link");
     btnMenu.addEventListener("click", () => {
         menu.classList.toggle("mostrar");
-        menuLink[0].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
-        menuLink[1].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
-        menuLink[2].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
-        menuLink[3].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
-        menuLink[4].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
-        menuLink[5].addEventListener("click", () => {
-            menu.classList.remove("mostrar");
-        });
+        menuLink.forEach(e => e.addEventListener("click", () =>{
+            menu.classList.remove("mostrar")
+        }));
+        // ESTA ES LO MISMO QUE EL forEach pero con forEach es no escrbimos más
+        // menuLink[0].addEventListener("click", () => {
+        //     menu.classList.remove("mostrar");
+        // });
+        // menuLink[1].addEventListener("click", () => {
+        //     menu.classList.remove("mostrar");
+        // });
     });
 };  

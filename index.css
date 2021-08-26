@@ -161,7 +161,7 @@ main{
 }
 .main-section{
     width:100%;
-    height:100vh;
+    min-height:100vh;
     padding-block-start:10rem;
     font-size:1.5rem;
 }
@@ -548,10 +548,13 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 .main-section6 .section6-content .section6-buttons .button-camera{
     width: 9rem;
     background-color: #36ea10;
-    padding: 1.5rem;
     border-radius: 100%;
     cursor: pointer;
     border: solid .3rem #000;
+}
+.main-section6 .section6-content .section6-buttons .button-camera svg{
+    padding: 1.5rem;
+    visibility: hidden;
 }
 .main-section6 .section6-content .section6-buttons .input-gallery{
     width: 0;
@@ -559,18 +562,26 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
 }
 .main-section6 .section6-content .section6-buttons .button-gallery{
     width: 9rem;
+    height: 8.5rem;
     background-color: #ed0808;
-    padding: 1.5rem;
     border-radius: 100%;
     cursor: pointer;
     border: solid .3rem #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main-section6 .section6-content .section6-buttons .button-gallery svg{
     width: 4.4rem;
+    position: absolute;
+    visibility: hidden;
 }
 .main-section6 .section6-content .section6-buttons .buttons h4{
     text-align: center;
     margin-block-start: .8rem;
+}
+.main-section6 .section6-content .section6-buttons .buttons h4 div{
+    visibility: hidden;
 }
 .main-section6 .section6-content .photo-video{
     position: relative;
@@ -607,6 +618,89 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
         width: 70rem;
         margin-block-end: 5rem;
     }
+}
+.main-section7 .section7-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section7 .section7-content .location-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block-end: 5rem;
+}
+.main-section7 .section7-content .location-btn .icon {
+    width: 9rem;
+    background-color: red;
+    border: solid;
+    border-radius: 100%;
+    margin-block-end: 1rem;
+}
+.main-section7 .section7-content .location-btn .icon svg{
+    padding: 1.5rem;
+    visibility: hidden;
+}
+.main-section7 .section7-content .location-btn .text p{
+    visibility: hidden;
+}
+.main-section7 .section7-content .location-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-section7 .section7-content .location-container .location-content{
+    height: 18rem;
+    background: #17c32c;
+    padding: 2rem 5rem;
+    border-radius: 2rem;
+    box-shadow: 7px 7px 9px 0px;
+    position: relative;
+    left: -100%;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@keyframes location-content {
+    0% {left: -100%;}
+    100% {left:0px;}
+}
+.main-section7 .section7-content .location-container .location-content p{
+    text-align: center;
+    margin-block-end: 2rem;
+}
+.main-section7 .section7-content .location-container .location-content ul{
+    margin-block-end: 1rem;
+}
+.main-section7 .section7-content .location-container .location-content div{
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+.main-section7 .section7-content .location-container .location-content div a{
+    color: #0037ff;
+}
+.main-section7 .section7-content .location-container .message-on-desktop{
+    width: 30rem;
+    margin-inline-start: 9rem;
+    position: relative;
+    animation-name: message-on-desktop;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@keyframes message-on-desktop {
+    0% {right: -100%;}
+    100% {right:0px;}
+}
+.main-section7 .section7-content .location-container .message-on-desktop h4{
+    text-align: center;
+    margin-block-end: 1rem;
+}
+.main-section7 .section7-content .location-container .message-on-desktop p{
+    text-align: justify;
 }
 .container-online{
     opacity: 0;
