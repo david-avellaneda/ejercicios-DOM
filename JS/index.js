@@ -13,6 +13,7 @@ import { renderCar } from "./skeleton_load.js";
 import webcam from "./webcam.js";
 import detectGeolocation from "./geolocation.js";
 import searchFilter from "./search_filter.js";
+import lottery from "./lottery.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -37,6 +38,8 @@ d.addEventListener("DOMContentLoaded", () => {
     seventhLink.addEventListener("click", () => smoothScroll("deteccion-de-ubicacion", "3000"));
     const eighthLink = links[7];
     eighthLink.addEventListener("click", () => smoothScroll("filtro-de-busqueda", "3000"));
+    const ninthLink = links[8];
+    ninthLink.addEventListener("click", () => smoothScroll("sorteo-digital", "3000"));
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 
@@ -64,6 +67,7 @@ d.addEventListener("DOMContentLoaded", () => {
     webcam("section6-buttons", "(min-width:900px)");
     detectGeolocation("location-content");
     searchFilter(".card-filter", ".card");
+    lottery("winner", ".player")
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {

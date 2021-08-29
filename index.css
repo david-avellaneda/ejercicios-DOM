@@ -66,7 +66,7 @@ header nav .menu{
     left:0;
     z-index:1;
     margin-inline-start:-100%;
-    padding-block-start:12rem;
+    padding-block-start:8rem;
     transition:all 1.4s;
     position:fixed;
 }
@@ -94,8 +94,8 @@ header nav .menu .menu-item .menu-link{
     display:flex;
     align-items:center;
     justify-content:center;
-    height:10vh;
-    font-size:2.5rem;
+    height:5rem;
+    font-size:2rem;
 }
 header nav .menu .menu-item:hover .menu-link{
     color:#000;
@@ -744,6 +744,30 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     visibility: hidden;
     opacity: 0;
     order: 1; /* Que todas las tarjetas que se oculten vayan al final ya que "0" es la posición uno */
+}
+.main-section9 .section9-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section9 .section9-content .players{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-block-end: 4rem;
+}
+.main-section9 .section9-content .players .player{
+    min-width: 9rem;
+    background: #1af9d0; 
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    margin-inline: 1.5rem;
+    margin-block-end: 2rem;
+    text-align: center;
+}
+.main-section9 .section9-content button{
+    padding: .5rem;
 }
 .container-online{
     opacity: 0;
