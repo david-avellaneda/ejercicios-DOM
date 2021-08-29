@@ -14,7 +14,7 @@ export default function lottery(btn, player) {
 };
 /* 
 // Para obtener un ganador donde hayan comentarios y obtener el nombre del ganador
-const getWinner = (selector) => {
+const getWinnerComment = (selector) => {
     const $players = document.querySelectorAll(selector),
         random = Math.floor(Math.random() * $players.length),
         winner = $players[random];
