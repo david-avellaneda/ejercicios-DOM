@@ -1,40 +1,55 @@
 export default function slider(){
-    const $slider = document.getElementById('slider'),
-        $leftBtn = document.getElementById('arrowLeft-btn'),
-        $rightBtn = document.getElementById('arrowRight-btn');
-    let $sliderSection = document.querySelectorAll(".slider-section"),
-        $sliderSectionLast = $sliderSection[$sliderSection.length -1]; // De esta manera se obtiene al último section
-    $slider.insertAdjacentElement('afterbegin', $sliderSectionLast); // Lo coloca después de empezar, es decir de primeras
-    function moveRight(){
-        let $sliderSectionFirst = document.querySelectorAll(".slider-section")[0]; // Toma al primero
-        $slider.style.marginInlineStart = "-200%";
-        $slider.style.transition = "all 1.6s ease"
-        setTimeout(() => {
-            $slider.style.transition = "none";
-            $slider.insertAdjacentElement('beforeend', $sliderSectionFirst); // Beforeend es "ANTES DE TERMINAR", es decir antes de que finalice la divi donde esta $slider
-            $slider.style.marginInlineStart = "-100%";
-        }, 1500);
+    const $rightBtn = document.getElementById('next'),
+        $leftBtn = document.getElementById('previous'),
+        $navigationBtns = document.querySelectorAll('#navBtns-container .nav-btn'),
+        $images = document.querySelectorAll('.slider img');
+    // console.log($images);
+    let i = 0, // Current slide position
+        slides = 3; // Total slides
+    function moveRight() {
+        document.getElementById('slider-image' + (i + 1)).classList.remove('active-image');
+        i = (slides + i + 1) % slides;
+        document.getElementById('slider-image' + (i + 1)).classList.add('active-image');
+        positionBtn(i + 1);
     }
     $leftBtn.addEventListener('click', () => {
-        let $sliderSection = document.querySelectorAll(".slider-section"),
-            $sliderSectionFirst = $sliderSection[$sliderSection.length -1];
-        $slider.style.marginInlineStart = "0";
-        $slider.style.transition = "all 1.6s ease"
-        setTimeout(() => {
-            $slider.style.transition = "none";
-            $slider.insertAdjacentElement('afterbegin', $sliderSectionFirst); // Beforeend es "DESPUÉS DE EMPEZAR", es decir antes de que la primera imagen en la div = $slider
-            $slider.style.marginInlineStart = "-100%";
-        }, 1500);
-        clearInterval(currentTime); // Cuando le de click al botón de la izquierda detenemos el setInterval
-        currentTime = setInterval(() => moveRight(), 10000); // Volvemos a iniciarlo
+        document.getElementById('slider-image' + (i + 1)).classList.remove('active-image');
+        i = (slides + i - 1) % slides;
+        document.getElementById('slider-image' + (i + 1)).classList.add('active-image');
+        positionBtn(i + 1);
+        clearInterval(automaticSlider); // Cuando le de click detenemos el setInterval
+        automaticSlider = setInterval(() => moveRight(), 8000); // Aquí cuando le de click y se vea una nueva imagen que vuelva a reiniciar el setInterval, por eso lo detenemos y lo volvemos a iniciar para que inicie desde 0 segundos y haga su ciclo normal hacia la derecha
     });
     $rightBtn.addEventListener('click', () => {
         moveRight();
-        clearInterval(currentTime); // Cuando le de click detenemos el setInterval
-        currentTime = setInterval(() => moveRight(), 10000); // Aquí cuando le de click y sea una nueva imagen que vuelva a reiniciar el setInterval, por eso lo detenemos y lo volvemos a iniciar para que inicie desde 0 segundos
+        clearInterval(automaticSlider); // Cuando le de click detenemos el setInterval
+        automaticSlider = setInterval(() => moveRight(), 8000); 
     });
-    let currentTime =
-        setInterval(() => {
-            moveRight();
-        }, 10000);
+    // console.log($navigationBtns);
+    const positionBtn = (num) => {
+        $navigationBtns.forEach((btn) => {
+            btn.style.backgroundColor = 'transparent';
+        });
+        document.querySelector("#navBtns-container .nav-btn:nth-child(" + num + ")").style.backgroundColor = '#ffff';
+    };
+    const images = (index) => {
+        $images.forEach(image => image.classList.remove('active-image'));
+        i = index - 1;
+        positionBtn(index);
+    }
+    $navigationBtns[0].addEventListener('click', () => {
+        images(1);
+        document.getElementById('slider-image' + 1).classList.add('active-image');
+    });
+    $navigationBtns[1].addEventListener('click', () => {
+        images(2);
+        document.getElementById('slider-image' + 2).classList.add('active-image');
+    });
+    $navigationBtns[2].addEventListener('click', () => {
+        images(3);
+        document.getElementById('slider-image' + 3).classList.add('active-image');
+    });
+    let automaticSlider = setInterval(() => {
+        moveRight();
+    }, 8000);
 };
