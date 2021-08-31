@@ -48,20 +48,20 @@ d.addEventListener("DOMContentLoaded", () => {
         "(min-width:850px)", 
         `<h4 class="youtube-title-mobile">Da click en la imagen para ver el video</h4>
         <a href="https://youtu.be/P982oehprfY" target="_blank" rel="noreferrer noopener" style="grid-column:1/3; grid-row:2;">
-            <img src="https://i.ytimg.com/vi_webp/P982oehprfY/maxresdefault.webp" style="width:100%;" />
+            <img loading="lazy" src="https://i.ytimg.com/vi_webp/P982oehprfY/maxresdefault.webp" style="width:100%;" />
         </a>`, // mobileContent, utilizamos las template strings
         `<h4 class="youtube-title-desktop">Da click para ver el video</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/P982oehprfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; grid-column:1/3;"></iframe>` // desktopContent, utilizamos las template strings
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/P982oehprfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; grid-column:1/3;"></iframe>` // desktopContent, utilizamos las template strings
     ); 
     responsive_object(
         "maps", // ID maps
         "(min-width:850px)", 
         `<h4 class="maps-title-mobile">Da click en la imagen para ver la ubicación</h4>
         <a href="https://goo.gl/maps/oBccT9j6u9uhhakA9" target="_blank" rel="noreferrer noopener" style="grid-column:1/3; grid-row:2; display:flex; justify-content:center;">
-            <img src="./assets/Icons/mapa.png" style="width:70%;" />
+            <img loading="lazy" src="./assets/Icons/mapa.png" style="width:70%;" />
         </a>`, // mobileContent, utilizamos las template strings
         `<h4 class="maps-title-desktop">Da click para ver el maps</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.263701817781!2d-74.0782321852529!3d4.598120596659561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a7eccfe58f%3A0x99cb72b35351476!2sPlaza%20de%20Bol%C3%ADvar%20de%20Bogot%C3%A1!5e1!3m2!1ses!2sco!4v1627661077028!5m2!1ses!2sco" width="600" height="450" style="border:0; width:100%; height: 315px; grid-column:1/3;" allowfullscreen="" loading="lazy"></iframe>` // desktopContent, utilizamos las template strings
+        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.263701817781!2d-74.0782321852529!3d4.598120596659561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a7eccfe58f%3A0x99cb72b35351476!2sPlaza%20de%20Bol%C3%ADvar%20de%20Bogot%C3%A1!5e1!3m2!1ses!2sco!4v1627661077028!5m2!1ses!2sco" width="600" height="450" style="border:0; width:100%; height: 315px; grid-column:1/3;" allowfullscreen="" loading="lazy"></iframe>` // desktopContent, utilizamos las template strings
     );
     userAgent("operating-system-name");
     setTimeout(() => {

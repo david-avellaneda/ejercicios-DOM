@@ -201,11 +201,11 @@
                             </div>
                         </div>
                         <div class="browser-logos">
-                            <img class="chrome" src="./assets/logos/google_chrome_logo.png" alt="Logo de Chrome" title="Google Chrome" />
-                            <img class="firefox" src="./assets/logos/Firefox_logo.png" alt="Logo de Firefox" title="Mozilla Firefox" />
-                            <img class="edge" src="./assets/logos/microsoft_edge_logo.png" alt="Logo de Edge" title="Microsoft Edge" />
-                            <img class="opera" src="./assets/logos/opera_logo.png" alt="Logo de Opera" title="Opera" />
-                            <img class="safari" src="./assets/logos/safari_logo.png" alt="Logo de Safari" title="Apple Safari" />
+                            <img loading="lazy" class="chrome" src="./assets/logos/google_chrome_logo.png" alt="Logo de Chrome" title="Google Chrome" />
+                            <img loading="lazy" class="firefox" src="./assets/logos/Firefox_logo.png" alt="Logo de Firefox" title="Mozilla Firefox" />
+                            <img loading="lazy" class="edge" src="./assets/logos/microsoft_edge_logo.png" alt="Logo de Edge" title="Microsoft Edge" />
+                            <img loading="lazy" class="opera" src="./assets/logos/opera_logo.png" alt="Logo de Opera" title="Opera" />
+                            <img loading="lazy" class="safari" src="./assets/logos/safari_logo.png" alt="Logo de Safari" title="Apple Safari" />
                         </div>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                     <div class="section6-buttons" id="section6-buttons"></div>
                     <div class="photo-video" id="photo-video">
                         <div class="container-photo" id="container-photo">
-                            <img id="photo" />
+                            <img loading="lazy" id="photo" />
                         </div>
                         <div class="container-video" id="container-video">
                             <video id="video"></video>
@@ -262,27 +262,27 @@
                     <input type="search" placeholder="Buscar" class="card-filter" />
                     <article class="cards">
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+                            <img loading="lazy" src="https://placeimg.com/200/200/nature" alt="Nature" />
                             <figcaption>Nature</figcaption>
                         </figure>
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/any" alt="Any" />
+                            <img loading="lazy" src="https://placeimg.com/200/200/any" alt="Any" />
                             <figcaption>Any</figcaption>
                         </figure>
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+                            <img loading="lazy" src="https://placeimg.com/200/200/tech" alt="Tech" />
                             <figcaption>Tech</figcaption>
                         </figure>
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                            <img loading="lazy" src="https://placeimg.com/200/200/animals" alt="Animals">
                             <figcaption>Animals</figcaption>
                         </figure>
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/people" alt="People" />
+                            <img loading="lazy" src="https://placeimg.com/200/200/people" alt="People" />
                             <figcaption>People</figcaption>
                         </figure>
                         <figure class="card">
-                            <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+                            <img loading="lazy" src="https://placeimg.com/200/200/arch" alt="Architecture">
                             <figcaption>Architecture</figcaption>
                         </figure>
                     </article>
@@ -313,13 +313,25 @@
             <section class="main-section main-section10" id="slider-responsive">
                     <div class="slider" id="slider">
                         <div class="slider-section">
-                            <img src="./assets/image/image-slider1.jpg" alt="" />
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./assets/image/Slider/Desktop_images/image-slider1.jpg" />
+                                <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider1.jpg" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider1.jpg" alt="" />
+                            </picture>
                         </div>
                         <div class="slider-section">
-                            <img src="./assets/image/image-slider2.jpg" alt="" />
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./assets/image/Slider/Desktop_images/image-slider2.jpg" />
+                                <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider2.jpg" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider2.jpg" alt="" />
+                            </picture>
                         </div>
                         <div class="slider-section">
-                            <img src="./assets/image/image-slider3.jpg" alt="" />
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./assets/image/Slider/Desktop_images/image-slider3.jpg" />
+                                <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider3.jpg" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider3.jpg" alt="" />
+                            </picture>
                         </div>
                     </div>
                     <div class="arrow-btn arrow-left" id="arrowLeft-btn">
