@@ -173,6 +173,9 @@ header nav .menu .menu-item:hover .menu-link{
 body.dark .main-section .section-title{
     color:#f7df1e;
 }
+main{
+    overflow: hidden;
+}
 .main-section .section-title h2 div{
     padding: .5rem;
     visibility: hidden;
@@ -629,14 +632,15 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     flex-direction: column;
     margin-block-end: 5rem;
 }
-.main-section7 .section7-content .location-btn .icon {
+.main-section7 .section7-content .location-btn .button {
     width: 9rem;
     background-color: red;
     border: solid;
     border-radius: 100%;
     margin-block-end: 1rem;
+    cursor: pointer;
 }
-.main-section7 .section7-content .location-btn .icon svg{
+.main-section7 .section7-content .location-btn .button svg{
     width: 100%;
     padding: 1.5rem;
     visibility: hidden;
@@ -686,7 +690,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     width: 30rem;
     margin-inline-start: 9rem;
     position: relative;
-    animation-name: message-on-desktop;
+    right: -100%;
     animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: 1;

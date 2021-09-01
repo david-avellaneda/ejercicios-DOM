@@ -24,13 +24,13 @@ export default function detectGeolocation(id) {
                     <a href="https://www.google.com/maps/@${coordinates.latitude},${coordinates.longitude},18z" target="_blank" rel="noreferrer noopener">Ver en Google Maps</a>
                 </div>`;
             if(window.matchMedia("(min-width: 900px").matches){
-                const $container_message_on_desktop = document.createElement("div");
-                $container_message_on_desktop.classList.add("message-on-desktop");
+                const $container_message_on_desktop = document.getElementById('message-on-desktop');
+                $container_message_on_desktop.style.animationName= "message-on-desktop";
+                $container_message_on_desktop.style.right = "0";
                 $container_message_on_desktop.innerHTML = `
                     <h4>Nota</h4>
                     <p>Si estás visitando este sitio web desde una computadora te recomiendo que para saber tu ubicación con más precisión, abras este sitio web desde un celular ya que el celular cuenta con un GPS y mostrará tu punto de ubicación exacto. La computadora no cuenta con GPS, cuenta con una ubicación pero no da información tan precisa ya que esta toma la ubicación de la conexión Wi-Fi.</p>
                 `;
-                $locationContainer.appendChild($container_message_on_desktop);
             };
         };
         const error = err => { // En caso de error, o sea de no tener el acceso a la ubicación o porque hubo un error al acceder a la ubicación
