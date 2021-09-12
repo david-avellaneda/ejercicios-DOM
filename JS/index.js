@@ -15,6 +15,7 @@ import detectGeolocation from "./geolocation.js";
 import searchFilter from "./search_filter.js";
 import lottery from "./lottery.js";
 import slider from "./slider.js";
+import scrollspy from "./scrollspy.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -72,6 +73,7 @@ d.addEventListener("DOMContentLoaded", () => {
     searchFilter(".card-filter", ".card");
     lottery("winner", ".player");
     slider();
+    scrollspy();
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
