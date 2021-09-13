@@ -16,6 +16,7 @@ import searchFilter from "./search_filter.js";
 import lottery from "./lottery.js";
 import slider from "./slider.js";
 import scrollspy from "./scrollspy.js";
+import smartVideo from "./smart_video.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -44,6 +45,8 @@ d.addEventListener("DOMContentLoaded", () => {
     ninthLink.addEventListener("click", () => smoothScroll("sorteo-digital", "3000"));
     const tenthLink = links[9];
     tenthLink.addEventListener("click", () => smoothScroll("slider-responsive", "3000"));
+    const elevenLink = links[10];
+    elevenLink.addEventListener("click", () => smoothScroll("video-inteligente", "3000"));
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 
@@ -74,6 +77,7 @@ d.addEventListener("DOMContentLoaded", () => {
     lottery("winner", ".player");
     slider();
     scrollspy();
+    smartVideo();
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {
