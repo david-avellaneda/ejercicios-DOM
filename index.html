@@ -15,7 +15,7 @@
         <div class="cancelInteractions-skeleton" id="cancelInteractions"></div>
         <header> 
             <div class="header-iconMenu" id="btnMenu"> 
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
+                <svg role="img" aria-labelledby="Icono de menú" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
                     <g id="surface1">
                         <path d="M40,6H4C1.8,6,0,7,0,8.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,6,40,6z"/>
                         <path d="M40,14.7H4c-2.2,0-4,1-4,2.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,14.7,40,14.7z"/>
@@ -43,7 +43,7 @@
         <main>
             <div class="main-header">
                 <h1><a href="https://david-avellaneda-git.github.io/ejercicios-DOM/" style="text-decoration: none; color:#000;">Ejercicios del DOM</a></h1>
-                <button class="changeBackground" id="changeBackground">
+                <button class="changeBackground" id="changeBackground" aria-label="Bóton para cambiar de el tema de la web">
                     <div class="changeBackground-btn"></div>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -222,7 +222,7 @@
                     <div class="section6-buttons" id="section6-buttons"></div>
                     <div class="photo-video" id="photo-video">
                         <div class="container-photo" id="container-photo">
-                            <img  id="photo" />
+                            <img id="photo" alt="Foto de tu computadora" />
                         </div>
                         <div class="container-video" id="container-video">
                             <video id="video"></video>
@@ -318,17 +318,17 @@
                             <picture>
                                 <source media="(min-width:1100px)" srcset="./assets/image/Slider/Desktop_images/image-slider1.jpg" />
                                 <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider1.jpg" />
-                                <img src="./assets/image/Slider/Mobile_images/image-slider1.jpg" alt="" class="active-image" id="slider-image1" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider1.jpg" alt="Foto de un teclado rojo" class="active-image" id="slider-image1" />
                             </picture>
                             <picture>
                                 <source media="(min-width:1100px)" srcset="./assets/image/Slider/Desktop_images/image-slider2.jpg" />
                                 <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider2.jpg" />
-                                <img src="./assets/image/Slider/Mobile_images/image-slider2.jpg" alt="" id="slider-image2" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider2.jpg" alt="Foto del espacio de trabajo de un progrmador" id="slider-image2" />
                             </picture>
                             <picture>
                                 <source media="(min-width:1100px)" srcset="./assets/image/Slider/Desktop_images/image-slider3.jpg" />
                                 <source media="(min-width:600px)" srcset="./assets/image/Slider/Tablet_images/image-slider3.jpg" />
-                                <img src="./assets/image/Slider/Mobile_images/image-slider3.jpg" alt="" id="slider-image3" />
+                                <img loading="lazy" src="./assets/image/Slider/Mobile_images/image-slider3.jpg" alt="Foto de una pantalla con código JavaScript" id="slider-image3" />
                             </picture>
                     </div>
                     <div class="arrow-btn arrow-left" id="previous">
@@ -375,7 +375,30 @@
                         <input type="submit" value="Enviar">
                     </fieldset>
                     <fieldset  class="contact-form-loader none">
-                        <img src="./assets/Icons/three-dots.svg" alt="Imagen de loader" />
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 404.7 101.2" style="enable-background:new 0 0 404.7 101.2;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#F7DF1E;}
+                                .st1{fill:#F7DF1E;fill-opacity:0.3;}
+                            </style>
+                            <circle class="st0" cx="50.6" cy="50.6" r="50.6">
+                            <animate accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="15" repeatCount="indefinite" restart="always" to="15" values="15;9;15">
+                                </animate>
+                            <animate accumulate="none" additive="replace" attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="1" repeatCount="indefinite" restart="always" to="1" values="1;.5;1">
+                                </animate>
+                            </circle>
+                            <circle class="st1" cx="202.4" cy="50.6" r="30.4">
+                            <animate accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="9" repeatCount="indefinite" restart="always" to="9" values="9;15;9">
+                                </animate>
+                            <animate accumulate="none" additive="replace" attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="0.5" repeatCount="indefinite" restart="always" to="0.5" values=".5;1;.5">
+                                </animate>
+                            </circle>
+                            <circle class="st0" cx="354.1" cy="50.6" r="50.6">
+                            <animate accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="15" repeatCount="indefinite" restart="always" to="15" values="15;9;15">
+                                </animate>
+                            <animate accumulate="none" additive="replace" attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" fill="remove" from="1" repeatCount="indefinite" restart="always" to="1" values="1;.5;1">
+                                </animate>
+                            </circle>
+                        </svg>
                     </fieldset>
                     <fieldset class="contact-form-response none">
                         <p>Los datos han sido enviados</p>
