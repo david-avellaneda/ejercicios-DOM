@@ -17,6 +17,7 @@ import lottery from "./lottery.js";
 import slider from "./slider.js";
 import scrollspy from "./scrollspy.js";
 import smartVideo from "./smart_video.js";
+import validations from "./form_validations.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -47,6 +48,8 @@ d.addEventListener("DOMContentLoaded", () => {
     tenthLink.addEventListener("click", () => smoothScroll("slider-responsive", "3000"));
     const elevenLink = links[10];
     elevenLink.addEventListener("click", () => smoothScroll("video-inteligente", "3000"));
+    const twelveLink = links[11];
+    twelveLink.addEventListener("click", () => smoothScroll("formulario", "3000"));
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 
@@ -78,6 +81,7 @@ d.addEventListener("DOMContentLoaded", () => {
     slider();
     scrollspy();
     smartVideo();
+    validations();
 });
 const $section2_stage = document.getElementById("section2-stage");
 $section2_stage.addEventListener("click", () => {

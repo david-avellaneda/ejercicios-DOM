@@ -36,6 +36,7 @@
                     <li class="menu-item"><a class="menu-link" href="./#sorteo-digital" data-scroll-spy>Sorteo digital</a></li>
                     <li class="menu-item"><a class="menu-link" href="./#slider-responsive" data-scroll-spy>Slider</a></li>
                     <li class="menu-item"><a class="menu-link" href="./#video-inteligente" data-scroll-spy>Video inteligente</a></li>
+                    <li class="menu-item"><a class="menu-link" href="./#formulario" data-scroll-spy>Formulario</a></li>
                 </ul>
             </nav>
         </header>
@@ -357,6 +358,29 @@
                     </h2>
                 </div>
                 <video class="sv" src="./assets/Video/Hack.mp4" muted controls loop></video>
+            </section>
+            <section class="main-section main-section12" id="formulario">
+                <div class="section-title">
+                    <h2 class="skeleton loading">
+                        <div class="contentVisibility">Formulario</div>
+                    </h2>
+                </div>
+                <form class="contact-form">
+                    <legend>Déjanos tu mensaje</legend>
+                    <fieldset class="message">
+                        <input type="text" name="name" placeholder="Ingresa tu nombre" title="Ingresa un nombre válido mínimo de 5 letras" pattern="^([A-Za-zÑñÁÉÍÓÚÜáéíóúü\s]{5,20})+$" required>
+                        <input type="email" name="email" placeholder="Ingresa tu email" title="Ingresa un email válido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9]+)*(\.[a-z]{2,15})$" required>
+                        <input type="text" name="subject" placeholder="Ingresa el asunto" title="El asunto debe ser de mínimo 5 letras o números" pattern="^([A-Za-zÑñÁÉÍÓÚÜáéíóúü0-9\s]{5,20})+$" required>
+                        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tu mensaje" title="150 caracteres como máximo" data-pattern="^.{1,150}$" required></textarea>
+                        <input type="submit" value="Enviar">
+                    </fieldset>
+                    <fieldset  class="contact-form-loader none">
+                        <img src="./assets/Icons/three-dots.svg" alt="Imagen de loader" />
+                    </fieldset>
+                    <fieldset class="contact-form-response none">
+                        <p>Los datos han sido enviados</p>
+                    </fieldset>
+                </form>
             </section>
         </main>
         <section>
