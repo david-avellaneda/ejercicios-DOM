@@ -25,4 +25,15 @@ export default function validations() {
             };
         };
     });
+    document.addEventListener('submit', e => {
+        const $loader = document.querySelector('.contact-form-loader'),
+            $answer = document.querySelector('.contact-form-response');
+        $loader.classList.remove('none');
+        setTimeout(() => { // Para que desaparezca el loader después de 3s cuando le de enviar
+            $loader.classList.add('none');
+            $answer.classList.remove('none');
+            $form.reset(); // Para que se limpie el formulario
+            setTimeout(() => $answer.classList.add('none'), 2500); // Cuando se termine el setTimeout del loader se ejecute este siguiente setTimeout   
+        }, 6000);
+    });
 };

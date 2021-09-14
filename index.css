@@ -952,11 +952,11 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     background-color: rgb(235, 35, 35);
     color: #fff;
     transition: all 800ms ease-in-out;
+    margin: 0;
 }
 .main-section12 .contact-form .contact-form-error.is-active{
     display: block;
     animation: show-message 1.5s 2 normal 0s ease-in-out both;
-    margin-block-start: 0rem;
 }
 .main-section12 .contact-form  .none{
     display: none;
