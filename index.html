@@ -14,15 +14,15 @@
     <body>
         <div class="cancelInteractions-skeleton" id="cancelInteractions"></div>
         <header> 
-            <div class="header-iconMenu" id="btnMenu"> 
-                <svg role="img" aria-labelledby="Icono de menú" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
+            <button class="header-iconMenu" id="btnMenu" aria-label="Abrir menú de navegación"> 
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44 34" style="enable-background:new 0 0 44 34;" xml:space="preserve">
                     <g id="surface1">
                         <path d="M40,6H4C1.8,6,0,7,0,8.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,6,40,6z"/>
                         <path d="M40,14.7H4c-2.2,0-4,1-4,2.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,14.7,40,14.7z"/>
                         <path d="M40,24.3H4c-2.2,0-4,1-4,2.3s1.8,2.3,4,2.3h36c2.2,0,4-1,4-2.3S42.2,24.3,40,24.3z"/>
                     </g>
             </svg>
-            </div>
+            </button>
             <nav class="navbar"> 
                 <ul class="menu" id="menu">
                     <li class="menu-item"><a class="menu-link" href="./#reloj-digital-y-alarma" data-scroll-spy>Reloj digital y música</a></li>
@@ -43,7 +43,7 @@
         <main>
             <div class="main-header">
                 <h1><a href="https://david-avellaneda-git.github.io/ejercicios-DOM/" style="text-decoration: none; color:#000;">Ejercicios del DOM</a></h1>
-                <button class="changeBackground" id="changeBackground" aria-label="Bóton para cambiar de el tema de la web">
+                <button class="changeBackground" id="changeBackground" aria-label="Cambiar el tema de la web">
                     <div class="changeBackground-btn"></div>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -193,7 +193,7 @@
                         </div>
                         <div class="skeleton loading">
                             <div class="contentVisibility">
-                                <button class="browser-btn" id="browser-name">
+                                <button class="browser-btn" id="browser-name" aria-label="Botón para saber que navegador estás usando">
                                     Saber<br>mi navegador
                                     <span id="span1"></span>
                                     <span id="span2"></span>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="section7-content">
                     <div class="location-btn">
-                            <button class="button skeleton loading" id="location-btn">
+                            <button class="button skeleton loading" id="location-btn" aria-label="Acceder a tu ubicacción">
                                 <svg class="contentVisibility" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
                                         <path d="M2400,5113c-334-33-658-157-920-352c-101-75-268-238-345-336c-157-201-271-432-334-680c-62-247-67-524-13-740   c130-514,498-1225,1112-2145c222-334,523-758,581-821c47-50,111-50,158,0c58,63,358,487,581,821c615,922,982,1631,1112,2145   c80,321,31,725-131,1070c-207,438-587,782-1042,943C2935,5097,2626,5136,2400,5113z M2797,4235c405-103,692-453,720-876   c14-219-58-456-192-628c-130-169-298-285-502-348c-80-24-103-27-258-27c-149-1-180,2-250,22c-323,94-571,330-668,637   c-109,347-18,717,240,973C2127,4226,2467,4318,2797,4235z"/>
@@ -407,13 +407,13 @@
             </section>
         </main>
         <section>
-            <div class="scrollTop" id="scrollToTop">
+            <button class="scrollTop" id="scrollToTop" aria-label="Ir al principio">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                     <g>
                         <path d="M445.8,238.8L264.4,4.1c-2-2.6-5.2-4.1-8.4-4.1c-3.2,0-6.4,1.5-8.4,4.1L66.2,238.8c-2.5,3.2-2.9,7.6-1.1,11.2   c1.8,3.7,5.5,6,9.6,6h96v245.3c0,5.9,4.8,10.7,10.7,10.7h149.3c5.9,0,10.7-4.8,10.7-10.7V256h96c4.1,0,7.8-2.3,9.6-6   C448.7,246.4,448.3,242,445.8,238.8z M330.7,234.7c-5.9,0-10.7,4.8-10.7,10.7v245.3H192V245.3c0-5.9-4.8-10.7-10.7-10.7H96.4   L256,28.1l159.6,206.6L330.7,234.7L330.7,234.7z"/>
                     </g>
                 </svg>
-            </div>
+            </button>
             <div class="container-online" id="container-online">
                 <div class="modal-online modalClose-online">
                     <div class="containerContent-online">
@@ -441,13 +441,13 @@
                     <div class="containerContent-offline">
                         <div class="contentTitle-offline">
                             <h2>Conexión pérdida 😞</h2>
-                            <div class="closeIcon-offline">
+                            <button class="closeIcon-offline" aria-label="Cerrar">
                                 <svg class="closeBtn-offline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
                                         <path d="M2365,5114c-266-29-428-61-617-125C989,4736,384,4131,131,3372c-199-594-168-1275,84-1844C576,713,1327,147,2210,23   c172-24,528-24,700,0c820,115,1514,600,1913,1337c323,598,386,1355,167,2011c-308,919-1115,1592-2070,1724   C2809,5110,2447,5123,2365,5114z M1890,3809c33-15,128-103,358-332l312-312l313,312c328,328,359,352,443,353c74,0,128-38,306-217   c176-177,208-223,208-298c0-83-25-114-353-442l-312-313l312-312c328-329,353-360,353-443c0-75-32-121-208-298   c-178-179-232-217-306-217c-84,1-115,25-443,353l-313,312l-312-312c-329-328-360-353-443-353c-75,0-121,32-298,208   c-179,178-217,232-217,306c1,84,25,115,353,444l312,312l-312,313c-328,328-352,359-353,443c0,74,38,128,217,306   c177,176,223,208,298,208C1827,3830,1865,3820,1890,3809z"/>
                                     </g>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
                         <div class="statusMessage-offline">
                             <h2>Se ha producido un error de red.</h2>
