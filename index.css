@@ -62,28 +62,28 @@ header .header-iconMenu {
     background-repeat: no-repeat;
 }
 header nav .menu{
-    height:100vh;
-    width:100%;
-    position:absolute;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
     background-color:#000000e3;
-    left:0;
-    z-index:1;
-    margin-inline-start:-100%;
-    padding-block-start:8rem;
-    transition:all 1.4s;
-    position:fixed;
+    left: 0;
+    z-index: 1;
+    margin-inline-start: -100%;
+    padding-block-start: 3rem;
+    transition: all 1.4s;
+    position: fixed;
 }
 header nav .mostrar {
-    margin-inline-start:0;
-	width:100%;
-	height:100vh;
-	transition:all 1.4s;
-	overflow:auto;
+    margin-inline-start: 0;
+	width: 100%;
+	height: 100vh;
+	transition: all 1.4s;
+	overflow: auto;
     z-index: 200;
 }
 header nav .menu .menu-item{
-    list-style:none;
-    width:100%;
+    list-style: none;
+    width: 100%;
     color:#000;
     text-align: center;
 }
