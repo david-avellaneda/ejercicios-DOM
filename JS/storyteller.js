@@ -30,6 +30,7 @@ export default function storyteller(){
         // El método find() devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada, es decir la voz que se escogió.
         // Lo que va adentro del find() dice, busca una voz = voice, si la propiedad voice.name coincide === con lo que viene en $option.value del select entonces asigna esa voz
         // console.log(readText); // Imprirá un speechSyntesisUtterance, su valor voice ya no vendrá igual null, si no con el valor del select, es decir con el nombre de la voz
+        e.preventDefault();
     });
     $speechBtn.addEventListener('click', () => {
         readText.text = $speechText.value; // En variable readText accedemos al atributo text = SpeechSynthesisUtterance contiene un  atributo "text", y esta variable readText será igual a lo que viene en $speechText.value, ese value es el texto que ingresa el usuario
