@@ -18,6 +18,7 @@ import slider from "./slider.js";
 import scrollspy from "./scrollspy.js";
 import smartVideo from "./smart_video.js";
 import validations from "./form_validations.js";
+import storyteller from "./storyteller.js";
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
     menuHamburguesa();
@@ -50,6 +51,8 @@ d.addEventListener("DOMContentLoaded", () => {
     elevenLink.addEventListener("click", () => smoothScroll("video-inteligente", "3000"));
     const twelveLink = links[11];
     twelveLink.addEventListener("click", () => smoothScroll("formulario", "3000"));
+    const thirteenLink = links[12];
+    thirteenLink.addEventListener("click", () => smoothScroll("narrador", "3000"));
     responsive_object(
         "youtube", // ID youtube
         "(min-width:850px)", 
@@ -95,3 +98,4 @@ document.addEventListener("keydown", (e) => {
 });
 darkMode("changeBackground"); // La sacamos del el evento DOMContentLoaded ya que no deja que hayan dos eventos iguales el mismo evento y necesitamos que cuando cargue el contenido rebice el localStorage por eso en js de darkMode se declaro el evento DOMContentLoaded y esta declaración la sacamos de este evento ya que no deja el mismo evento, ver js de dark mode
 networkStatus(); // Lo declaramos afuera porque si lo declaramos en DOMContentLoaded no sirve ya que tiene que estar detectando en cada momento más no cuando el documento esté cargado
+storyteller();

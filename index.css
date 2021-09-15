@@ -3,8 +3,6 @@
     margin:0;
     padding:0;
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Para quitarle ese borde azul al darle click */
-    outline: none;
-    border: none;
 }
 html{
      font-size:62.5%; /* 1rem = 10px */
@@ -60,6 +58,7 @@ header .header-iconMenu {
     bottom:6vh;
     z-index:100;
     background-repeat: no-repeat;
+    border: none;
 }
 header nav .menu{
     height: 100vh;
@@ -920,7 +919,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     margin-block: 2rem;
     border: none;
 }
-.main-section12 .contact-form .message > input, textarea{
+.main-section12 .contact-form .message input, .main-section12 .contact-form .message textarea{
     width: 100%;
     margin-block: .7rem 0rem;
     resize: none;
@@ -970,6 +969,57 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
         visibility: visible;
         opacity: 1;
     }
+}
+.main-section13 .container-narrator{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section13 .container-narrator select{
+    min-width: 20rem;
+    width: auto;
+    background-color: #ff6a00bf;
+    border: .2rem solid #000;
+    border-radius: .7rem;
+    padding: .4rem 1.1rem;
+    margin-block-end: 3rem;
+    font-family: 'Baloo Chettan 2', cursive;
+    cursor: pointer;
+    outline: none;
+}
+.main-section13 .container-narrator textarea{
+    width: 80% !important;
+    max-width: 50rem !important;
+    height: 23rem !important;
+    background: #64e514d1;
+    color: black;
+    border: 1.6px solid #000;
+    border-radius: .7rem;
+    padding: 2rem 3rem;
+    font-family: 'Baloo Chettan 2', cursive;
+    resize: none;
+    outline: none;
+    margin-block-end: 2rem;
+}
+.main-section13 .container-narrator textarea::placeholder{
+    color: rgb(46, 46, 46);
+}
+.main-section13 .container-narrator button{
+    width: 12rem;
+    padding: .4rem 2rem;
+    font-size: 1.8rem;
+    background: red;
+    color: #fff;
+    border: none;
+    box-shadow: 3px 3px 5px 0px #000;
+    font-family: 'Baloo Chettan 2', cursive;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.main-section13 .container-narrator button:hover{
+    transform: scale(1.1);
 }
 .container-online{
     opacity: 0;
@@ -1143,6 +1193,7 @@ body.dark .main-section5 .content-operatingSystem-browser .browser-btn #span4{
     transition: all 2s ease;
     bottom:90vh;
     z-index: 100;
+    border: none;
 }
 .scrollTop:hover{
     background-color:rgb(43, 39, 39);
