@@ -22,6 +22,7 @@ export default function storyteller(){
                 $option.textContent = `${voice.name} - ${voice.lang}`;
                 $languageTypes.appendChild($option); // Le agregamos las opciones al select
             });
+            e.preventDefault();
         });
     });
     $languageTypes.addEventListener('change', e => { // Para que pueda cambiar y escoger el tipo de voz disponible
@@ -32,8 +33,9 @@ export default function storyteller(){
         // console.log(readText); // Imprirá un speechSyntesisUtterance, su valor voice ya no vendrá igual null, si no con el valor del select, es decir con el nombre de la voz
         e.preventDefault();
     });
-    $speechBtn.addEventListener('click', () => {
+    $speechBtn.addEventListener('click', e => {
         readText.text = $speechText.value; // En variable readText accedemos al atributo text = SpeechSynthesisUtterance contiene un  atributo "text", y esta variable readText será igual a lo que viene en $speechText.value, ese value es el texto que ingresa el usuario
         speechSynthesis.speak(readText); // Para que lea la variable readText, la ejecutamos accediendo al atributo speak de speechSynthesis
+        e.preventDefault();
     });
 };
